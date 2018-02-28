@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+  <TextView
+    android:id="@+id/editProfile_name_textView"
+    android:layout_marginTop="10dp"
+    android:text="Name"
+    style="@style/EditContactTextView" />
+  <EditText
+    android:id="@+id/editProfile_name_editText"
+    android:text="Name"
+    android:inputType="text"
+    android:textCursorDrawable="@null"
+    android:layout_below="@id/editProfile_name_textView"
+    style="@style/EditContactEditText" />
+  <TextView
+    android:id="@+id/editProfile_lastname_textView"
+    android:text="Lastname"
+    android:layout_below="@id/editProfile_name_editText"
+    style="@style/EditContactTextView" />
+  <EditText
+    android:id="@+id/editProfile_lastname_editText"
+    android:text="Lastname"
+    android:inputType="text"
+    android:textCursorDrawable="@null"
+    android:layout_below="@id/editProfile_lastname_textView"
+    style="@style/EditContactEditText" />
+  <TextView
+    android:id="@+id/editProfile_status_textView"
+    android:text="Status"
+    android:layout_below="@id/editProfile_lastname_editText"
+    style="@style/EditContactTextView" />
+  <EditText
+    android:id="@+id/editProfile_status_editText"
+    android:text="status"
+    android:inputType="text"
+    android:textCursorDrawable="@null"
+    android:layout_below="@id/editProfile_status_textView"
+    style="@style/EditContactEditText" />
+  <Button
+    android:id="@+id/editProfile_save_button"
+    android:text="Save data"
+    android:layout_below="@id/editProfile_status_editText"
+    style="@style/EditContactButton" />
+  <Button
+    android:id="@+id/editProfile_cancel_button"
+    android:text="Cancel"
+    android:layout_below="@id/editProfile_save_button"
+    style="@style/EditContactButton" />
+</merge>

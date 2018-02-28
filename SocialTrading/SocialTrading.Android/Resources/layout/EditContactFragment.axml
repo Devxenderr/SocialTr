@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+  
+  <socialTrading.droid.views.moreOptions.ToolBarBackView
+    android:id="@+id/toolbarBackButtonTitle_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/customToolbarHeight"
+    android:background="@color/MidnightExpress"
+    android:elevation="4dp"
+    app:title="Toolbar"/>
+
+  <ScrollView
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <socialTrading.droid.views.editContact.EditContactView
+    android:id="@+id/editContact_view_EditContactView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+  </ScrollView>
+  
+</LinearLayout>

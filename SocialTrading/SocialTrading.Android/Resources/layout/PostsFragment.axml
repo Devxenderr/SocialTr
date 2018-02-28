@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@color/Gray"
+    android:theme="@style/Theme.AppCompat">
+ 
+  <include
+      android:id="@+id/posts_toolbar"
+      layout="@layout/ToolBarTwoButtons" 
+  />
+
+  <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/posts_swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/posts_toolbar">
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/postsRecyclerView"
+          android:scrollbars="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+  </android.support.v4.widget.SwipeRefreshLayout>
+  
+  <android.support.design.widget.FloatingActionButton
+        android:id="@+id/posts_createPost_floatingActionButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="#3b7ae9"
+        android:src="@drawable/ic_plus"/>
+</RelativeLayout>

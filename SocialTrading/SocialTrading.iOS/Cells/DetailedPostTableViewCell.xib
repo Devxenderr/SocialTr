@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="299" id="cxk-wN-pdQ" customClass="DetailedPostTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="298.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2216" customClass="DetailedPostView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2216" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="B6d-z7-tdL"/>
+                    <constraint firstAttribute="trailing" secondItem="2216" secondAttribute="trailing" id="H3g-rq-Yh0"/>
+                    <constraint firstAttribute="bottom" secondItem="2216" secondAttribute="bottom" id="Ic7-yi-fYh"/>
+                    <constraint firstItem="2216" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="TNx-zW-jsx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_detailedPostView" destination="2216" id="name-outlet-2216"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="52.5"/>
+        </tableViewCell>
+    </objects>
+</document>

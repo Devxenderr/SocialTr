@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="BlueHead">#0D47A1</color>
+  <color name="White">#ffffff</color>
+  <color name="Black">#000000</color>
+  <color name="DefaultBorder">#0D47A1</color>
+  <color name="Red">#FF0000</color>
+  <color name="Green">#00CC00</color>
+  <color name="MediumBlue">#0D47A1</color>
+  <color name="Gray">#E0E0E0</color>
+  <color name="RoyalBlue">#3b7ae9</color>
+  <color name="WhiteSmoke">#f5f5f5</color>
+  <color name="MistyRose">#ffe4e1</color>
+  <color name="MidnightExpress">#16254C</color>
+  <color name="Transparent">#00000000</color>
+  <color name="Nobel">#9B9B9B</color>
+  <color name="StatusBarColor">#0d172f</color>
+</resources>

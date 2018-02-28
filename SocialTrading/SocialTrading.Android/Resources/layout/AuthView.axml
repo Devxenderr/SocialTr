@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroundRA_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ImageView
+    android:id="@+id/auth_background_imageView"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+    <RelativeLayout
+        android:id="@+id/auth_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+      <ImageView
+          android:id="@+id/auth_logo_imageView"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/logoImageViewHeight"
+          android:layout_centerHorizontal="true"
+          />
+      <TextView
+          android:id="@+id/auth_slogan_textViewView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:gravity="center"
+          android:textSize="16sp"
+          android:text="First social network for investors"
+          android:layout_below="@id/auth_logo_imageView" />
+  
+      <EditText
+          android:id="@+id/auth_email_editText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Email"
+          android:layout_marginTop="20dp"
+          android:inputType="textEmailAddress"
+          android:layout_below="@+id/auth_slogan_textViewView"
+          android:singleLine="true"
+          android:drawablePadding="10dp"
+          style="@style/AuthEditText" />
+      <EditText
+          android:id="@+id/auth_pass_editText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:singleLine="true"
+          android:password="true"
+          android:hint="Password"
+          android:layout_marginTop="10dp"
+          android:drawablePadding="10dp"
+          android:maxLength="128"
+          android:layout_below="@+id/auth_email_editText"
+          style="@style/AuthEditText" />
+      <Button
+          android:id="@+id/auth_auth_button"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_below="@+id/auth_pass_editText"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginStart="15dp"
+          android:background="@color/RoyalBlue" />
+      <TextView
+          android:id="@+id/auth_forgot_textView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/auth_auth_button"
+          android:gravity="center"
+          android:layout_marginTop="15dp"
+          android:linksClickable="true"
+          android:autoLink="web" />
+      <!--<TextView
+          android:id="@+id/auth_socialEnter_textView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/auth_forgot_textView"
+          android:gravity="center"
+          android:text="Enter via social networks"
+          android:layout_marginTop="15dp" />-->
+      <RelativeLayout
+          android:id="@+id/auth_social_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/auth_forgot_textView"
+          android:layout_marginTop="10dp">
+        <Button
+          android:id="@+id/newauth_facebook_imageButton"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+         
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginStart="15dp"
+          android:background="@color/RoyalBlue" />
+          <!--<ImageButton
+              android:id="@+id/auth_facebook_imageButton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="45dp"
+              android:background="@color/Transparent"
+              android:layout_toStartOf="@+id/auth_socialCenter_container" />
+          <RelativeLayout
+              android:id="@+id/auth_socialCenter_container"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginStart="-15dp"
+              android:layout_below="@+id/auth_auth_button">
+              <ImageButton
+                  android:id="@+id/auth_google_imageButton"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginEnd="15dp"
+                  android:background="@color/Transparent" />
+              <ImageButton
+                  android:id="@+id/auth_odnokl_imageButton"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@color/Transparent"
+                  android:layout_marginStart="15dp"
+                  android:layout_toEndOf="@id/auth_google_imageButton" />
+          </RelativeLayout>
+          <ImageButton
+              android:id="@+id/auth_vk_imageButton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="30dp"
+              android:background="@color/Transparent"
+              android:layout_toEndOf="@+id/auth_socialCenter_container" />-->
+      </RelativeLayout>
+      <TextView
+          android:id="@+id/auth_noAccount_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="45dp" 
+          android:layout_below="@id/auth_social_container"
+          android:layout_centerHorizontal="true"
+          android:text="No account?"/>
+      <Button
+          android:id="@+id/auth_reg_button"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_below="@+id/auth_noAccount_textView"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:background="@color/RoyalBlue" />
+    </RelativeLayout>
+</RelativeLayout>

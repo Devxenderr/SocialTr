@@ -1,0 +1,220 @@
+﻿{
+	"ITextViewTheme": [
+	{
+		"AuthHeaderStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 16
+		},
+		"AuthForgotPassLabelStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14,
+			"TextStyle": "Underline"
+		},
+		"AuthNoAccountLabelStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14
+		},
+		"AuthLabelStyleIOS": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14
+		},
+		"AuthFeatureLabelStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14
+		},
+		"AuthAgreementLabelMainStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 12
+		},
+		"AuthAgreementLabelLinkedStyle": {
+			"TextColor": "#FFFFFF",
+			"TextSize": 12,
+			"TextStyle": "Bold"
+		},
+		"CreatePostTitleStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#ffffff",
+			"TextSize": 19
+		},
+		"CreatePostDividingLineStyle": {
+			"BackgroundColor": "#9B9B9B"
+		},
+		"CreatePostNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 18
+		},
+		"PostHeaderDateStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 12
+		},
+		"PostHeaderForecastTimeStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"PostHeaderToolStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"PostHeaderCurrentPriceStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"PostHeaderBuySellStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14
+		},
+		"PostHeaderBuySellValueStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 14
+		},
+		"PostHeaderDifferenceStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 12
+		},
+		"PostHeaderDifferenceValueRedStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#ee5451",
+			"TextSize": 14
+		},
+		"PostHeaderDifferenceValueGreenStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#1ebea5",
+			"TextSize": 14
+		},
+		"PostBodyCommentCollapsedStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"PostBodyCommentExpandedStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 14
+		},
+		"PostHeaderDifferenceValuePositiveStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#1EBEA5",
+			"TextSize": 14
+		},
+		"PostHeaderDifferenceValueNegativeStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#EE5451",
+			"TextSize": 14
+		},
+		"PostHeaderDiffStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 12
+		},
+		"PostHeaderDiffValueStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"PostHeaderCurrentPriceStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 12
+		},
+		"PostHeaderForecastStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"PostHeaderBuySellValueStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 12
+		},
+		"PostHeaderBuySellStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 16
+		},
+		"PostHeaderDateStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 12
+		},
+		"PostHeaderQuoteStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"PostHeaderFirstLastNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"PostsToolBarTitleStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 19
+		},
+		"PostsCreatePostStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 19
+		},
+		"ToolsNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"MoreOptionsOptionItemTextStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"MoreOptionsNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 16
+		},
+		"MoreOptionsYourProfileStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 12
+		},
+		"MoreOptionsToolBarTitleStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 19
+		},
+		"EditContactTextViewStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 11
+		},
+		"EditContactTextViewStyleIOS": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 14
+		},
+		"EditProfileTextViewStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 11
+		},
+		"EditProfileTextViewStyleIOS": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 14
+		}
+	}
+	]
+}

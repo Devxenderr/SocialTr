@@ -1,0 +1,9 @@
+diff a/SocialTrading/SocialTrading/Theme/ThemeModel.cs b/SocialTrading/SocialTrading/Theme/ThemeModel.cs	(rejected hunks)
+@@ -0,6 +0,7 @@
+ namespace SocialTrading.Theme
+ =======
+ namespace SocialTrading.SetThemes
++>>>>>>> MAST-98:SocialTrading/SocialTrading/SetThemes/ThemeModel.cs
+ {
+     public class ThemeModel
+     {

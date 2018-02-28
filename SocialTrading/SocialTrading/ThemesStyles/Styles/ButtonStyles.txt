@@ -1,0 +1,183 @@
+﻿{
+	"IButtonTheme": [
+	{
+		"AuthButtonStyle": {
+			"BackgroundColor": "#3b7ae9",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		},
+		"AuthButtonStyleIOS": {
+			"BackgroundColor": "#3b7ae9",
+			"TextColor": "#ffffff",
+			"CornerRadius": 4,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		},
+		"AuthFacebookButtonStyleIOS": {
+			"BackgroundColor": "#00FFFFFF",
+			"TextColor": "#ffffff",
+			"CornerRadius": 4,
+			"TextSize": 14,
+			"BorderColor": "#FFFFFF",
+            "BorderWidth": 1
+		},
+		"AuthFacebookButtonStyle": {
+			"BackgroundColor": "#00FFFFFF",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#FFFFFF",
+            "BorderWidth": 2
+		},
+		"AuthAgreementButtonMainStyle": {
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FFFFFF",
+			"TextSize": 12
+		},
+		"AuthAgreementButtonLinkedStyle": {
+			"TextColor": "#FFFFFF",
+			"TextSize": 12,
+			"TextStyle": "Bold"
+		},
+		"CreatePostPublishButtonStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#3b7ae9",
+			"TextSize": 19
+		},
+		"CreatePostToolsNoneStyle":{
+			"BackgroundColor": "#3b7ae9",
+			"TextColor": "#ffffff",
+			"CornerRadius": 6,
+			"TextSize": 17
+		},
+		"CreatePostToolsFailStyle":{
+			"BackgroundColor": "#ee5451",
+			"TextColor": "#ffffff",
+			"CornerRadius": 6,
+			"TextSize": 17
+		},
+		"CreatePostPriceStyle":{
+			"BackgroundColor": "#f5f5f5",
+			"TextColor": "#000000",
+			"CornerRadius": 6,
+			"TextSize": 15
+		},
+		"CreatePostSelectorsNoneStyle":{
+			"BackgroundColor": "#f5f5f5",
+			"TextColor": "#000000",
+			"CornerRadius": 6,
+			"ImageRight": "arrowDownBlackCreatePost24",
+			"TextSize": 15
+		},
+		"CreatePostSelectorsFailStyle":{
+			"BackgroundColor": "#ffe4e1",
+			"TextColor": "#000000",
+			"CornerRadius": 6,
+			"ImageRight": "arrowDownBlackCreatePost24",
+			"TextSize": 15
+		},
+		"PostSocialLikeNoneStyleDroid":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "likeGrayPost24",
+			"TextSize": 12
+		},
+		"PostSocialLikeActiveStyleDroid":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "likeBluePost24",
+			"TextSize": 12
+		},
+		"PostSocialCommentStyleDroid":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "commentGrayPost24",
+			"TextSize": 12
+		},
+		"PostSocialShareStyleDroid":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "shareGrayPost24",
+			"TextSize": 12
+		},
+		"PostSocialLikeNoneStyleIOS":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "likeGrayPost24",
+			"TextSize": 12,
+			"TintColor": "#FF9E9E9E"
+		},
+		"PostSocialLikeActiveStyleIOS":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#FF3B7CE5",
+			"ImageLeft": "likeBluePost24",
+			"TextSize": 12,
+			"TintColor": "#FF3B7CE5"
+		},
+		"PostSocialCommentStyleIOS":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "commentGrayPost24",
+			"TextSize": 12
+		},
+		"PostSocialShareStyleIOS":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"ImageLeft": "shareGrayPost24",
+			"TextSize": 12
+		},
+		"PostHeaderNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"PostHeaderLastNameStyle":{
+			"BackgroundColor": "#00000000",
+			"TextColor": "#000000",
+			"TextSize": 14
+		},
+		"EditContactSaveButtonStyle": {
+			"BackgroundColor": "#3b7ae9",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		},
+		"EditContactCancelButtonStyle": {
+			"BackgroundColor": "#9c9c9c",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		},
+		"UpdatePostToolsDisableStyle":{
+			"BackgroundColor": "#9c9c9c",
+			"TextColor": "#ffffff",
+			"CornerRadius": 6,
+			"TextSize": 17
+		},
+		"UpdatePostTextFieldsDisableStyle":{
+			"BackgroundColor": "#f5f5f5",
+			"TextColor": "#9c9c9c",
+			"CornerRadius": 6,
+			"TextSize": 15
+		},
+		"EditProfileSaveButtonStyle": {
+			"BackgroundColor": "#3b7ae9",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		},
+		"EditProfileCancelButtonStyle": {
+			"BackgroundColor": "#9c9c9c",
+			"TextColor": "#ffffff",
+			"CornerRadius": 3,
+			"TextSize": 14,
+			"BorderColor": "#000000"
+		}
+	}
+	]
+}

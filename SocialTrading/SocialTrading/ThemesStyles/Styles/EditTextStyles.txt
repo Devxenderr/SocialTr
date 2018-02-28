@@ -1,0 +1,121 @@
+﻿{
+	"IEditTextTheme": [
+	{
+		"AuthEditTextStyle": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"CornerRadius": 2,
+			"HintTextColor": "#000000",
+			"BorderWidth": 3,
+			"BorderColor":"#FFFFFF"
+		},
+		"AuthEditTextFailStyle": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"CornerRadius": 2,
+			"HintTextColor": "#000000",
+			"BorderWidth": 3,
+			"BorderColor":"#EE5451",
+			"ImageRight": "enterTextFail18"
+		},
+		"AuthEditTextSuccessStyle": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#3B7AE9",
+			"CornerRadius": 4,
+			"HintTextColor": "#000000",
+			"BorderWidth": 3,
+			"BorderColor":"#FFFFFF",
+			"ImageRight": "enterTextSuccess18"
+		},
+        "AuthEditTextStyleIOS": {
+            "BackgroundColor": "#ffffff",
+            "TextColor": "#000000",
+            "CornerRadius": 4,
+            "HintTextColor": "#000000",
+            "BorderWidth": 2,
+            "BorderColor":"#FFFFFF"
+        },
+		"AuthEditTextFailStyleIOS": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"CornerRadius": 4,
+			"HintTextColor": "#000000",
+			"BorderWidth": 2,
+			"BorderColor":"#EE5451"
+		},
+		"AuthEditTextSuccessStyleIOS": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#3B7AE9",
+			"CornerRadius": 4,
+			"HintTextColor": "#000000",
+			"BorderWidth": 2,
+			"BorderColor":"#FFFFFF"
+		},
+		"CreatePostCommentNoneStyle": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"HintTextColor": "#000000"
+		},
+		"CreatePostCommentFailStyle": {
+			"BackgroundColor": "#ffe4e1",
+			"TextColor": "#000000",
+			"HintTextColor": "#000000"
+		},
+		"EditContactEditTextNoneStyle": {
+			"TextColor": "#000000",
+			"BackgroundTint": "#e0e0e0"
+		},
+		"EditContactUneditableTextNoneStyle": {
+			"TextColor": "#858585",
+			"BackgroundTint": "#e0e0e0"
+		},
+		"EditContactEditTextFailStyle": {
+			"TextColor": "#FF0000",
+			"BackgroundTint": "#FF0000"
+		},
+		"EditContactUneditableTextNoneStyleIOS": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#858585",
+			"CornerRadius": 3,
+			"BorderWidth": 1,
+			"BorderColor":"#858585"
+		},
+		"EditContactEditTextNoneStyleIOS": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"CornerRadius": 3,
+			"BorderWidth": 1,
+			"BorderColor":"#858585"
+		},
+		"EditContactEditTextFailStyleIOS": {
+			"BackgroundColor": "#ffffff",
+			"TextColor": "#000000",
+			"CornerRadius": 3,
+			"BorderWidth": 1,
+			"BorderColor":"#FF0000"
+		},
+		"EditProfileEditTextStyle": {
+			"TextColor": "#000000",
+			"BackgroundTint": "#e0e0e0"
+		},
+		"EditProfileEditTextFailStyle": {
+			"TextColor": "#FF0000",
+			"BackgroundTint": "#FF0000"
+        },
+        "EditProfileEditTextStyleIOS": {
+            "BackgroundColor": "#ffffff",
+            "TextColor": "#000000",
+            "CornerRadius": 3,
+            "BorderWidth": 1,
+            "BorderColor":"#858585"
+        },
+        "EditProfileEditTextFailStyleIOS": {
+            "BackgroundColor": "#ffffff",
+            "TextColor": "#000000",
+            "CornerRadius": 3,
+            "BorderWidth": 1,
+            "BorderColor":"#FF0000"
+		}
+	}
+	]
+}

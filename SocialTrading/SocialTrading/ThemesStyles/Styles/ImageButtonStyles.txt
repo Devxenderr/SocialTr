@@ -1,0 +1,61 @@
+﻿{
+	"IImageButtonTheme": [
+	{
+		"AuthBackButtonStyle": {
+			"Image": "arrowBackWhite36",
+			"TintColor": "#ffffff"
+		},
+		"CreatePostBackButtonStyle": {
+			"Image": "arrowBackWhite24",
+			"TintColor": "#00000000"
+		},
+		"CreatePostBackButtonStyleIOS": {
+			"Image": "arrowBackBlack24",
+            "BackgroundColor": "#00000000",
+            "TintColor": "#FFFFFF"
+		},
+		"CreatePostAttachImageButtonStyle": {
+			"Image": "attachImageCreatePost36",
+			"TintColor": "#00000000"
+		},
+		"CreatePostCancelAttachButtonStyle": {
+			"Image": "cancelAttach18",
+			"TintColor": "#00000000"
+		},
+		"PostHeaderAvatarButtonStyle": {
+			"Image": "defaultAvatar",
+			"TintColor": "#00000000"
+		},
+		"PostHeaderOptionsButtonStyle": {
+			"Image": "moreVertBlack24",
+			"BackgroundColor": "#00000000"
+		},
+		"PostHeaderFavoriteStateActiveStyle":{
+			"Image": "starBlack24"
+		},
+		"PostHeaderFavoriteStateNoneStyle":{
+			"Image": "starBorderBlack24"
+		},
+		"PostHeaderCurrentPriceImgUpStyleIOS":{
+			"Image": "ArrowDownRed18"
+		},
+		"PostHeaderCurrentPriceImgDownStyleIOS":{
+			"Image": "ArrowUpGreen18"
+		},
+		"PostsMenuButtonStyleIOS":{
+            "Image": "menuBlack24",
+            "BackgroundColor": "#00000000",
+            "TintColor": "#FFFFFF"
+		},
+		"MoreOptionsToolBarBackButtonStyle":{
+			"Image": "arrowBackWhite24",
+			"BackgroundColor": "#00000000"
+        },
+        "MoreOptionsToolBarBackButtonStyleIOS":{
+            "Image": "arrowBackBlack24",
+            "BackgroundColor": "#00000000",
+            "TintColor": "#FFFFFF"
+		}
+	}
+	]
+}

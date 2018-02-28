@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationPhoneNumberView">
+            <connections>
+                <outlet property="_backImageButton" destination="208" id="name-outlet-208"/>
+                <outlet property="_featureImage" destination="220" id="name-outlet-220"/>
+                <outlet property="_featureText" destination="216" id="name-outlet-216"/>
+                <outlet property="_headerLabel" destination="4" id="name-outlet-4"/>
+                <outlet property="_logoImage" destination="169" id="name-outlet-169"/>
+                <outlet property="_nextButton" destination="107" id="name-outlet-107"/>
+                <outlet property="_phoneCountryLabel" destination="23" id="name-outlet-23"/>
+                <outlet property="_phoneCountryTextField" destination="5" id="name-outlet-5"/>
+                <outlet property="_phoneNumberLabel" destination="155" id="name-outlet-155"/>
+                <outlet property="_phoneNumberTextField" destination="145" id="name-outlet-145"/>
+                <outlet property="_rootView" destination="1" id="name-outlet-1"/>
+                <outlet property="_skipButton" destination="112" id="name-outlet-112"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter phone number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="234" y="155" width="132" height="17"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_enterPhone_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="30" y="216.5" width="62" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_phoneCountry_editText"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="184"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="PhoneCountryDidEnd:" destination="-1" eventType="editingDidEnd" id="162"/>
+                        <action selector="PhoneCountryValueChanged:" destination="-1" eventType="editingChanged" id="164"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                    <rect key="frame" x="33" y="202" width="36" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_phoneCountry_textView_ios"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="107">
+                    <rect key="frame" x="30" y="271.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_follow_email_button"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="NextButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="119"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="112">
+                    <rect key="frame" x="30" y="326.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_skip_phone_button"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SkipButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="120"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="145">
+                    <rect key="frame" x="102" y="216.5" width="468" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_phoneNumber_editText"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="PhoneNumberDidEnd:" destination="-1" eventType="editingDidEnd" id="166"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="155">
+                    <rect key="frame" x="105" y="202" width="36" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_phoneNumber_textView_ios"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="169">
+                    <rect key="frame" x="210" y="60" width="180" height="65"/>
+                    <accessibility key="accessibilityConfiguration" label="regPhone_logo_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="242"/>
+                        <constraint firstAttribute="height" constant="65" id="243"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="208">
+                    <rect key="frame" x="15" y="25" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="regPhone_back_imageButton"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="BackButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="213"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="216">
+                    <rect key="frame" x="195" y="554.5" width="200" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_featureText_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="232"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220" misplaced="YES">
+                    <rect key="frame" x="175" y="411" width="240" height="128"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_featureImage_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="169" firstAttribute="top" secondItem="1" secondAttribute="top" constant="60" id="170"/>
+                <constraint firstItem="169" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="173"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="169" secondAttribute="bottom" constant="30" id="178"/>
+                <constraint firstItem="4" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="179"/>
+                <constraint firstItem="23" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="30" id="180"/>
+                <constraint firstItem="23" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="33" id="181"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="23" secondAttribute="bottom" id="182"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="30" id="183"/>
+                <constraint firstItem="145" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="10" id="189"/>
+                <constraint firstAttribute="trailing" secondItem="145" secondAttribute="trailing" constant="30" id="190"/>
+                <constraint firstItem="107" firstAttribute="top" secondItem="145" secondAttribute="bottom" constant="25" id="191"/>
+                <constraint firstItem="107" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="192"/>
+                <constraint firstItem="107" firstAttribute="trailing" secondItem="145" secondAttribute="trailing" id="193"/>
+                <constraint firstItem="112" firstAttribute="top" secondItem="107" secondAttribute="bottom" constant="25" id="194"/>
+                <constraint firstItem="112" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="195"/>
+                <constraint firstItem="112" firstAttribute="trailing" secondItem="145" secondAttribute="trailing" id="196"/>
+                <constraint firstItem="145" firstAttribute="top" secondItem="23" secondAttribute="bottom" id="203"/>
+                <constraint firstItem="155" firstAttribute="leading" secondItem="145" secondAttribute="leading" constant="3" id="204"/>
+                <constraint firstItem="155" firstAttribute="bottom" secondItem="145" secondAttribute="top" id="205"/>
+                <constraint firstItem="208" firstAttribute="top" secondItem="1" secondAttribute="top" constant="25" id="209"/>
+                <constraint firstItem="208" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="210"/>
+                <constraint firstAttribute="bottom" secondItem="216" secondAttribute="bottom" constant="25" id="217"/>
+                <constraint firstItem="216" firstAttribute="top" secondItem="220" secondAttribute="bottom" constant="15" id="221"/>
+                <constraint firstAttribute="centerX" secondItem="216" secondAttribute="centerX" constant="5" id="225"/>
+                <constraint firstAttribute="centerX" secondItem="220" secondAttribute="centerX" id="235"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="1242" height="2208"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="likeBluePost24" width="24" height="24"/>
+        <image name="likeGrayPost24" width="24" height="24"/>
+        <image name="logoInvestArena" width="599" height="232"/>
+        <image name="MoreOptionsButton" width="24" height="24"/>
+        <image name="moreVertBlack24" width="24" height="24"/>
+        <image name="odnoklassnikiLogin48" width="72" height="72"/>
+        <image name="offline" width="970" height="970"/>
+        <image name="online" width="970" height="970"/>
+        <image name="regEmailLogo" width="60" height="57"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+    </resources>
+</document>

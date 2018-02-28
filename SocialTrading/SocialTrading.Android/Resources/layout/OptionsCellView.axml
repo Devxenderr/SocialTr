@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SocialTrading.Droid.Views.MoreOptions.OptionsCellView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/optionsCell_image_imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/corners" />
+    <TextView
+        android:id="@+id/optionsCell_text_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp" />
+</SocialTrading.Droid.Views.MoreOptions.OptionsCellView>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostHeaderView">
+            <connections>
+                <outlet property="_avatarButton" destination="122" id="name-outlet-122"/>
+                <outlet property="_buySellImageView" destination="202" id="name-outlet-202"/>
+                <outlet property="_buySellLabel" destination="71" id="name-outlet-71"/>
+                <outlet property="_buySellValueLabel" destination="178" id="name-outlet-178"/>
+                <outlet property="_buySellView" destination="i30-GW-qhS" id="name-outlet-i30-GW-qhS"/>
+                <outlet property="_currentPriceValueLabel" destination="101" id="name-outlet-101"/>
+                <outlet property="_dateLabel" destination="33" id="name-outlet-33"/>
+                <outlet property="_diffImageButton" destination="149" id="name-outlet-149"/>
+                <outlet property="_favoriteButton" destination="131" id="name-outlet-131"/>
+                <outlet property="_forecastTimeValueLabel" destination="50" id="name-outlet-50"/>
+                <outlet property="_nameLabel" destination="13022" id="name-outlet-13022"/>
+                <outlet property="_optionButton" destination="165" id="name-outlet-165"/>
+                <outlet property="_profitLabel" destination="82" id="name-outlet-82"/>
+                <outlet property="_profitValueLabel" destination="86" id="name-outlet-86"/>
+                <outlet property="_quoteLabel" destination="67" id="name-outlet-67"/>
+                <outlet property="_rootView" destination="1" id="name-outlet-1"/>
+                <outlet property="_statusUserImageView" destination="212" id="name-outlet-212"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="33" misplaced="YES">
+                    <rect key="frame" x="96" y="44.5" width="65.5" height="14"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_postDate_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="41"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50" misplaced="YES">
+                    <rect key="frame" x="482" y="38" width="95.5" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_forecastTimeValue_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="67" misplaced="YES">
+                    <rect key="frame" x="16" y="95" width="74" height="20"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_tool_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="86">
+                    <rect key="frame" x="556.5" y="132" width="21" height="18"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_diffValue_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- - -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="101">
+                    <rect key="frame" x="51" y="130" width="29.5" height="20"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_currentPriceValue_textView"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="122">
+                    <rect key="frame" x="16" y="10" width="72" height="72"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_userAvatar_imageView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="123"/>
+                        <constraint firstAttribute="width" constant="72" id="124"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="avatar">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="AvatarButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="170"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131">
+                    <rect key="frame" x="16" y="90" width="30" height="30"/>
+                    <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="StarFavourite">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="FavoriteButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="172"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="149">
+                    <rect key="frame" x="16" y="125" width="30" height="30"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="165">
+                    <rect key="frame" x="565" y="5.5" width="25" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_options_button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="11844"/>
+                    </constraints>
+                    <state key="normal" image="MoreVertical">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="OptionsButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="173"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online" translatesAutoresizingMaskIntoConstraints="NO" id="212">
+                    <rect key="frame" x="133" y="17" width="7" height="7"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="7" id="622"/>
+                        <constraint firstAttribute="height" constant="7" id="623"/>
+                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profit:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="82">
+                    <rect key="frame" x="509.5" y="134" width="37" height="16"/>
+                    <accessibility key="accessibilityConfiguration" label="postHeader_difference_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i30-GW-qhS" misplaced="YES">
+                    <rect key="frame" x="350" y="91.5" width="240" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sell " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="71">
+                            <rect key="frame" x="5" y="3.5" width="96" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration" label="postHeader_buySell_textView"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrowTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="202">
+                            <rect key="frame" x="192" y="0.0" width="48" height="28"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="178">
+                            <rect key="frame" x="104" y="3.5" width="136" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration" label="postHeader_buySellValue_textView"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="71" firstAttribute="centerY" secondItem="i30-GW-qhS" secondAttribute="centerY" id="Heh-dv-O4B"/>
+                        <constraint firstItem="71" firstAttribute="width" secondItem="i30-GW-qhS" secondAttribute="width" multiplier="2:5" id="IwC-H4-IKd"/>
+                        <constraint firstItem="178" firstAttribute="trailing" secondItem="202" secondAttribute="trailing" id="Rm8-9i-wIL"/>
+                        <constraint firstItem="71" firstAttribute="leading" secondItem="i30-GW-qhS" secondAttribute="leading" constant="5" id="THw-LY-ESt"/>
+                        <constraint firstAttribute="trailing" secondItem="202" secondAttribute="trailing" id="Vqv-9p-XtE"/>
+                        <constraint firstItem="202" firstAttribute="top" secondItem="i30-GW-qhS" secondAttribute="top" id="cPv-ga-WuX"/>
+                        <constraint firstAttribute="height" constant="28" id="dtC-FG-QNN"/>
+                        <constraint firstItem="178" firstAttribute="centerY" secondItem="i30-GW-qhS" secondAttribute="centerY" id="nO3-RX-Jyp"/>
+                        <constraint firstItem="178" firstAttribute="leading" secondItem="71" secondAttribute="trailing" constant="3" id="oSj-3a-7uf"/>
+                        <constraint firstItem="202" firstAttribute="width" secondItem="i30-GW-qhS" secondAttribute="width" multiplier="2:10" id="prK-5i-3Op"/>
+                        <constraint firstAttribute="bottom" secondItem="202" secondAttribute="bottom" id="qd0-6v-MDg"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13022">
+                    <rect key="frame" x="98" y="10" width="467" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="122" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="125"/>
+                <constraint firstItem="149" firstAttribute="centerY" secondItem="101" secondAttribute="centerY" id="194"/>
+                <constraint firstItem="101" firstAttribute="leading" secondItem="149" secondAttribute="trailing" constant="5" id="195"/>
+                <constraint firstItem="122" firstAttribute="top" secondItem="1" secondAttribute="top" constant="10" id="234"/>
+                <constraint firstItem="131" firstAttribute="top" secondItem="122" secondAttribute="bottom" constant="8" id="550"/>
+                <constraint firstItem="131" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="551"/>
+                <constraint firstItem="67" firstAttribute="top" secondItem="122" secondAttribute="bottom" constant="13" id="6306"/>
+                <constraint firstItem="67" firstAttribute="leading" secondItem="122" secondAttribute="leading" id="8345"/>
+                <constraint firstItem="67" firstAttribute="centerY" secondItem="i30-GW-qhS" secondAttribute="centerY" id="9325"/>
+                <constraint firstItem="82" firstAttribute="centerY" secondItem="101" secondAttribute="centerY" constant="2" id="10662"/>
+                <constraint firstItem="82" firstAttribute="centerY" secondItem="86" secondAttribute="centerY" constant="1" id="10663"/>
+                <constraint firstItem="86" firstAttribute="leading" secondItem="82" secondAttribute="trailing" constant="10" id="10664"/>
+                <constraint firstItem="13022" firstAttribute="leading" secondItem="122" secondAttribute="trailing" constant="10" id="13023"/>
+                <constraint firstItem="13022" firstAttribute="top" secondItem="122" secondAttribute="top" id="13024"/>
+                <constraint firstItem="13022" firstAttribute="leading" secondItem="33" secondAttribute="leading" constant="2" id="13026"/>
+                <constraint firstItem="33" firstAttribute="top" secondItem="13022" secondAttribute="bottom" constant="14" id="13027"/>
+                <constraint firstItem="33" firstAttribute="bottom" secondItem="50" secondAttribute="bottom" id="17838"/>
+                <constraint firstItem="165" firstAttribute="leading" secondItem="13022" secondAttribute="trailing" id="17840"/>
+                <constraint firstItem="165" firstAttribute="centerX" secondItem="50" secondAttribute="trailing" id="18328"/>
+                <constraint firstItem="165" firstAttribute="centerX" secondItem="86" secondAttribute="trailing" id="18329"/>
+                <constraint firstItem="165" firstAttribute="centerY" secondItem="13022" secondAttribute="centerY" id="18819"/>
+                <constraint firstItem="i30-GW-qhS" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="2:5" id="4zi-KI-oKW"/>
+                <constraint firstAttribute="trailing" secondItem="i30-GW-qhS" secondAttribute="trailing" constant="10" id="6nB-bM-pec"/>
+                <constraint firstAttribute="trailing" secondItem="165" secondAttribute="trailing" constant="10" id="Hnq-fL-5GJ"/>
+                <constraint firstItem="149" firstAttribute="leading" secondItem="67" secondAttribute="leading" id="JQF-F8-bFt"/>
+                <constraint firstItem="149" firstAttribute="top" secondItem="67" secondAttribute="top" constant="30" id="jtI-Pj-tZf"/>
+            </constraints>
+            <point key="canvasLocation" x="4.5" y="-136.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="arrowBackBlack24" width="24" height="24"/>
+        <image name="arrowBackWhite24" width="24" height="24"/>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="761" height="1347"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="contactsMoreOptions36" width="36" height="36"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="likeBluePost24" width="24" height="24"/>
+        <image name="likeGrayPost24" width="24" height="24"/>
+        <image name="logoInvestArena" width="599" height="232"/>
+        <image name="logoutMoreOptions36" width="36" height="36"/>
+        <image name="menuBlack24" width="24" height="24"/>
+        <image name="MoreOptionsButton" width="24" height="24"/>
+        <image name="moreVertBlack24" width="24" height="24"/>
+        <image name="odnoklassnikiLogin48" width="72" height="72"/>
+        <image name="offline" width="970" height="970"/>
+        <image name="online" width="970" height="970"/>
+        <image name="profileSettingsMoreOptions36" width="36" height="36"/>
+        <image name="regEmailLogo" width="60" height="57"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="rightArrowTransparent" width="96" height="96"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+        <image name="arrowDownRed18" width="36" height="36"/>
+        <image name="arrowUpGreen18" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pass_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+  <ImageView
+    android:id="@+id/forgotPass_background_imageView"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+      <ImageButton
+        android:id="@+id/pass_back_imageButton"
+        style="@style/RegBackImageButton"/>      
+      <ImageView
+        android:id="@+id/pass_logo_imageView"
+        style="@style/LogoImage" />
+    <TextView
+      android:id="@+id/pass_header_textView"
+      android:layout_below="@id/pass_logo_imageView"
+      android:layout_marginTop="50dp"
+      style="@style/RegTextView"/>
+    <EditText
+      android:id="@+id/pass_email_editText"
+      android:layout_below="@id/pass_header_textView"
+      android:singleLine="true"    
+      android:inputType="textEmailAddress"
+      android:layout_marginTop="15dp"
+      style="@style/AuthEditText" />
+    <Button
+      android:id="@+id/pass_retrive_button"
+      android:layout_below="@+id/pass_email_editText"
+      android:layout_marginTop="15dp"
+      style="@style/RegButton" />
+</RelativeLayout>

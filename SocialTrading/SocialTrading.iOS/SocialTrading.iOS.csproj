@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D81BE27C-9D0C-4A63-9155-9EA7028ADB31}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SocialTrading.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SocialTrading.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>
+    </DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFloat32>false</MtouchFloat32>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Mock|iPhoneSimulator'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhoneSimulator\Mock\</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;MOCK;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Mock|iPhone'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhone\Mock\</OutputPath>
+    <DefineConstants>DEBUG;__UNIFIED__;__MOBILE__;__IOS__;MOCK</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseDeployTestFlight|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\ReleaseDeployTestFlight</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Maxi Services LTD. (7RDDYA983Z)</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>mmInvestArena_Dist</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>com.investarena.app</IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BuildUITestCI|iPhoneSimulator'">
+    <OutputPath>bin\iPhoneSimulator\BuildUITestCI\</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;BuildUITestCI</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchFastDev>true</MtouchFastDev>
+    <CodesignProvision>iOS Team Provisioning Profile: com.investarena.app</CodesignProvision>
+    <CodesignKey>iPhone Developer: Pavel Shmidt (ZFKC3U2D6T)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BuildUITestCI|iPhone'">
+    <OutputPath>bin\iPhone\BuildUITestCI\</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType />
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>ARM64</MtouchArch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HockeySDK, Version=5.0.6555.30965, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\HockeySDK.Xamarin.5.1.0\lib\Xamarin.iOS10\HockeySDK.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK.iOSBindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\HockeySDK.Xamarin.5.1.0\lib\Xamarin.iOS10\HockeySDK.iOSBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SDWebImage, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.SDWebImage.3.7.5\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Websockets.Ios, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Websockets.Pcl.1.1.9\lib\xamarinios10\Websockets.Ios.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSockets.PCL, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Websockets.Pcl.1.1.9\lib\xamarinios10\WebSockets.PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Facebook">
+      <HintPath>..\..\packages\Xamarin.Facebook.iOS.4.24.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.SocketRocket">
+      <HintPath>..\..\packages\Square.SocketRocket.0.5.1\lib\Xamarin.iOS\Square.SocketRocket.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\..\packages\Xamarin.TestCloud.Agent.0.21.4\lib\Xamarin.iOS\Calabash.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-72.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite24.imageset\ic_arrow_back_white.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite24.imageset\ic_arrow_back_white_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite24.imageset\ic_arrow_back_white_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite36.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite36.imageset\ic_arrow_back_white_36pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite36.imageset\ic_arrow_back_white_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackWhite36.imageset\ic_arrow_back_white_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlack24.imageset\ic_arrow_drop_down_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlack24.imageset\ic_arrow_drop_down_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlackCreatePost24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlackCreatePost24.imageset\ic_keyboard_arrow_down_white.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlackCreatePost24.imageset\ic_keyboard_arrow_down_white_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownBlackCreatePost24.imageset\ic_keyboard_arrow_down_white_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpBlack24.imageset\ic_arrow_drop_up_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpBlack24.imageset\ic_arrow_drop_up_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\attachImageCreatePost36.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\attachImageCreatePost36.imageset\ic_local_see_36pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\attachImageCreatePost36.imageset\ic_local_see_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\attachImageCreatePost36.imageset\ic_local_see_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backgroundRA.imageset\auth_background.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backgroundRA.imageset\auth_background_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backgroundRA.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Cancel.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Cancel.imageset\ic_cancel_18pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Cancel.imageset\ic_cancel_18pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Cancel.imageset\ic_cancel_18pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cancelAttach18.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cancelAttach18.imageset\ic_cancel_18pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cancelAttach18.imageset\ic_cancel_18pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cancelAttach18.imageset\ic_cancel_18pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\commentGrayPost24.imageset\commentGrayPost24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\commentGrayPost24.imageset\commentGrayPost24_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\commentGrayPost24.imageset\commentGrayPost24_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\commentGrayPost24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contactsMoreOptions36.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contactsMoreOptions36.imageset\ic_account_box_white_36pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contactsMoreOptions36.imageset\ic_account_box_white_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contactsMoreOptions36.imageset\ic_account_box_white_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\defaultAvatar.imageset\defaultAvatar.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebookLogin48.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebookLogin48.imageset\ic_fb_login_48dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\googleLogin48.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\googleLogin48.imageset\ic_google_login_48dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Launch_1242x2208.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Launch_640x1136.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Launch_640x960.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Launch_750x1334.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeBluePost24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeBluePost24.imageset\likeBluePost24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeBluePost24.imageset\likeBluePost24_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeBluePost24.imageset\likeBluePost24_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeGrayPost24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeGrayPost24.imageset\likeGrayPost24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeGrayPost24.imageset\likeGrayPost24_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\likeGrayPost24.imageset\likeGrayPost24_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoInvestArena.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoInvestArena.imageset\investarena_logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoInvestArena.imageset\investarena_logo1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoutMoreOptions36.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoutMoreOptions36.imageset\ic_exit_to_app_white_36pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoutMoreOptions36.imageset\ic_exit_to_app_white_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logoutMoreOptions36.imageset\ic_exit_to_app_white_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menuBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menuBlack24.imageset\ic_menu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menuBlack24.imageset\ic_menu_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menuBlack24.imageset\ic_menu_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\MoreOptionsButton.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\MoreOptionsButton.imageset\ic_view_headline.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\MoreOptionsButton.imageset\ic_view_headline_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\MoreOptionsButton.imageset\ic_view_headline_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\moreVertBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\moreVertBlack24.imageset\ic_more_vert.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\moreVertBlack24.imageset\ic_more_vert_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\moreVertBlack24.imageset\ic_more_vert_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\odnoklassnikiLogin48.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\odnoklassnikiLogin48.imageset\ic_ok_login_48dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\offline.imageset\offline.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\online.imageset\online.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profileSettingsMoreOptions36.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profileSettingsMoreOptions36.imageset\ic_account_settings_variant_white_36dp_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profileSettingsMoreOptions36.imageset\ic_account_settings_variant_white_36dp_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profileSettingsMoreOptions36.imageset\ic_account_settings_variant_white_36dp_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regEmailLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regEmailLogo.imageset\regEmailLogo1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regEmailLogo.imageset\regEmailLogo2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regEmailLogo.imageset\regEmailLogo3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regNameLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regNameLogo.imageset\regNameLogo1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regNameLogo.imageset\regNameLogo2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regNameLogo.imageset\regNameLogo3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPassLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPassLogo.imageset\regPassLogo1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPassLogo.imageset\regPassLogo2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPassLogo.imageset\regPassLogo3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPhoneLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPhoneLogo.imageset\regPhoneLogo1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPhoneLogo.imageset\regPhoneLogo2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\regPhoneLogo.imageset\regPhoneLogo3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightArrow.imageset\rightArrow.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightArrowTransparent.imageset\48dp 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightArrowTransparent.imageset\48dp 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightGreenArrow.imageset\rightGreenArrow.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\shareGrayPost24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\shareGrayPost24.imageset\shareGrayPost24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\shareGrayPost24.imageset\shareGrayPost24_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\shareGrayPost24.imageset\shareGrayPost24_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\starBlack24.imageset\ic_star_black_24dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\starBorderBlack24.imageset\ic_star_border_black_24dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\vkontakteLogin48.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\online.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightArrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightGreenArrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\offline.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\starBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\starBorderBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\ImageSplash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\defaultAvatar.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rightArrowTransparent.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\vkontakteLogin48.imageset\ic_vk_login_48dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-72.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowBackBlack24.imageset\icons8-back-72.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backgroundRA.imageset\auth_background.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backgroundRA.imageset\auth_background_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownRed18.imageset\arrowUpRed18.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownRed18.imageset\arrowUpRed18_3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowDownRed18.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpGreen18.imageset\arrowDownGreen18.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpGreen18.imageset\arrowDownGreen18_3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrowUpGreen18.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_socialtrading_1024х1024-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\ITunesArtwork" />
+    <ITunesArtwork Include="Resources\ITunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\Authorization\AuthView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\Authorization\ForgotPassView.xib" />
+    <InterfaceDefinition Include="Views\Registration\UserAgreementView.xib" />
+    <InterfaceDefinition Include="Views\Registration\RegistrationEmailView.xib" />
+    <InterfaceDefinition Include="Views\Registration\RegistrationNameView.xib" />
+    <InterfaceDefinition Include="Views\Registration\RegistrationPasswordView.xib" />
+    <InterfaceDefinition Include="Views\Registration\RegistrationPhoneNumberView.xib" />
+    <InterfaceDefinition Include="Views\MoreOptions\MoreOptionsView.xib" />
+    <InterfaceDefinition Include="Cells\PostCardViewCell.xib" />
+    <InterfaceDefinition Include="Cells\ToolViewCell.xib" />
+    <InterfaceDefinition Include="Cells\ProfileTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\MoreOptions\ProfileCellView\ProfileCellView.xib" />
+    <InterfaceDefinition Include="Views\Post\Header\PostSimpleHeaderView.xib" />
+    <InterfaceDefinition Include="Views\EditProfile\EditProfileView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Cells\DetailedPostTableViewCell.xib" />
+    <InterfaceDefinition Include="Cells\OptionsTableViewCell.xib" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <InterfaceDefinition Include="Views\CreatePost\CreatePostView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\CreatePost\CreatePostToolsView.xib" />
+    <InterfaceDefinition Include="Views\Post\Header\PostHeaderView.xib" />
+    <InterfaceDefinition Include="Views\Post\Body\PostBodyView.xib" />
+    <InterfaceDefinition Include="Views\Post\Statistics\PostStatisticsView.xib" />
+    <InterfaceDefinition Include="Views\Post\Social\PostSocialView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\Trade\TradeView.xib" />
+    <InterfaceDefinition Include="Views\Post\Chart\PostChartView.xib" />
+    <InterfaceDefinition Include="Views\Post\PostView.xib" />
+    <InterfaceDefinition Include="Views\Post\DetailedPostView.xib" />
+    <InterfaceDefinition Include="Views\MoreOptions\OptionCellView\OptionCellView.xib" />
+    <InterfaceDefinition Include="Views\EditContact\EditContactView.xib" />
+    <InterfaceDefinition Include="Views\UpdatePost\UpdatePostView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cells\DetailedPostTableViewCell.cs" />
+    <Compile Include="Cells\DetailedPostTableViewCell.designer.cs">
+      <DependentUpon>DetailedPostTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\OptionsTableViewCell.cs" />
+    <Compile Include="Cells\OptionsTableViewCell.designer.cs">
+      <DependentUpon>OptionsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionView\CollectionViewPosts.cs" />
+    <Compile Include="CollectionView\CollectionViewPosts.designer.cs">
+      <DependentUpon>CollectionViewPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DetailedPostViewController.cs" />
+    <Compile Include="Controllers\DetailedPostViewController.designer.cs">
+      <DependentUpon>DetailedPostViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MoreOptions\EditContactViewController.cs" />
+    <Compile Include="Controllers\MoreOptions\EditContactViewController.designer.cs">
+      <DependentUpon>EditContactViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MoreOptions\CountriesViewController.cs" />
+    <Compile Include="Controllers\MoreOptions\CountriesViewController.designer.cs">
+      <DependentUpon>CountriesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MoreOptions\EditProfileViewController.cs" />
+    <Compile Include="Controllers\MoreOptions\EditProfileViewController.designer.cs">
+      <DependentUpon>EditProfileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\MoreOptions\RouterEditContact.cs" />
+    <Compile Include="Routers\UpdatePost\RouterUpdatePost.cs" />
+    <Compile Include="Routers\MoreOptions\RouterToolsCountriesIOS.cs" />
+    <Compile Include="Tools\EnhancedToolbar.cs" />
+    <Compile Include="Controllers\CreatePost\UpdatePostViewController.cs" />
+    <Compile Include="Controllers\CreatePost\UpdatePostViewController.designer.cs">
+      <DependentUpon>UpdatePostViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdatePost\UpdatePostView.cs" />
+    <Compile Include="Views\UpdatePost\UpdatePostView.designer.cs">
+      <DependentUpon>UpdatePostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditContact\EditContactView.cs" />
+    <Compile Include="Views\EditContact\EditContactView.designer.cs">
+      <DependentUpon>EditContactView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\MoreOptions\RouterOptionsCell.cs" />
+    <Compile Include="Routers\RouterToolBarPosts.cs" />
+    <Compile Include="Views\MoreOptions\OptionCellView\OptionCellView.cs" />
+    <Compile Include="Views\MoreOptions\OptionCellView\OptionCellView.designer.cs">
+      <DependentUpon>OptionCellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\CreatePost\RouterToolsIOS.cs" />
+    <Compile Include="Theme\GlobalControlsTheme.cs" />
+    <Compile Include="Theme\ThemesHelperNew.cs" />
+    <Compile Include="Views\Post\DetailedPostView.cs" />
+    <Compile Include="Views\Post\DetailedPostView.designer.cs">
+      <DependentUpon>DetailedPostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Controllers\PostsViewController.cs" />
+    <Compile Include="Controllers\PostsViewController.designer.cs">
+      <DependentUpon>PostsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\Post\RouterPost.cs" />
+    <Compile Include="Views\Post\PostView.cs" />
+    <Compile Include="Views\Post\PostView.designer.cs">
+      <DependentUpon>PostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\Authorization\RouterAuth.cs" />
+    <Compile Include="Routers\Authorization\RouterForgotPass.cs" />
+    <Compile Include="Routers\CreatePost\RouterCreatePost.cs" />
+    <Compile Include="Routers\Registration\RouterRegEmail.cs" />
+    <Compile Include="Routers\Registration\RouterRegName.cs" />
+    <Compile Include="Routers\Registration\RouterRegPass.cs" />
+    <Compile Include="Routers\Registration\RouterRegPhone.cs" />
+    <Compile Include="Views\Post\Chart\PostChartView.cs" />
+    <Compile Include="Views\Post\Chart\PostChartView.designer.cs">
+      <DependentUpon>PostChartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Post\ToolBarPostsView.cs" />
+    <Compile Include="Views\Trade\TradeView.cs" />
+    <Compile Include="Views\Trade\TradeView.designer.cs">
+      <DependentUpon>TradeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Authorization\ForgotPassViewController.cs" />
+    <Compile Include="Controllers\Authorization\ForgotPassViewController.designer.cs">
+      <DependentUpon>ForgotPassViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionView\ToolTableView.cs" />
+    <Compile Include="CollectionView\ToolTableView.designer.cs">
+      <DependentUpon>ToolTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Post\Social\PostSocialView.cs" />
+    <Compile Include="Views\Post\Social\PostSocialView.designer.cs">
+      <DependentUpon>PostSocialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Post\Statistics\PostStatisticsView.cs" />
+    <Compile Include="Views\Post\Statistics\PostStatisticsView.designer.cs">
+      <DependentUpon>PostStatisticsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Post\Body\PostBodyView.cs" />
+    <Compile Include="Views\Post\Body\PostBodyView.designer.cs">
+      <DependentUpon>PostBodyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Post\Header\PostHeaderView.cs" />
+    <Compile Include="Views\Post\Header\PostHeaderView.designer.cs">
+      <DependentUpon>PostHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreatePost\CreatePostView.cs" />
+    <Compile Include="Views\CreatePost\CreatePostView.designer.cs">
+      <DependentUpon>CreatePostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Tools\iOS_DAL.cs" />
+    <Compile Include="Tools\SegueStrings.cs" />
+    <Compile Include="Controllers\Authorization\AuthViewController.cs" />
+    <Compile Include="Controllers\Authorization\AuthViewController.designer.cs">
+      <DependentUpon>AuthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registration\RegNameViewController.cs" />
+    <Compile Include="Controllers\Registration\RegNameViewController.designer.cs">
+      <DependentUpon>RegNameViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registration\RegEmailViewController.cs" />
+    <Compile Include="Controllers\Registration\RegEmailViewController.designer.cs">
+      <DependentUpon>RegEmailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registration\RegPassViewController.cs" />
+    <Compile Include="Controllers\Registration\RegPassViewController.designer.cs">
+      <DependentUpon>RegPassViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registration\UserAgreementViewController.cs" />
+    <Compile Include="Controllers\Registration\UserAgreementViewController.designer.cs">
+      <DependentUpon>UserAgreementViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DataSources\PostsDataSource.cs" />
+    <Compile Include="Controllers\Delegates\PostsDelegate.cs" />
+    <Compile Include="Views\Authorization\AuthView.cs" />
+    <Compile Include="Views\Authorization\AuthView.designer.cs">
+      <DependentUpon>AuthView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Authorization\ForgotPassView.cs" />
+    <Compile Include="Views\Authorization\ForgotPassView.designer.cs">
+      <DependentUpon>ForgotPassView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\UserAgreementView.cs" />
+    <Compile Include="Views\Registration\UserAgreementView.designer.cs">
+      <DependentUpon>UserAgreementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationEmailView.cs" />
+    <Compile Include="Views\Registration\RegistrationEmailView.designer.cs">
+      <DependentUpon>RegistrationEmailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationNameView.cs" />
+    <Compile Include="Views\Registration\RegistrationNameView.designer.cs">
+      <DependentUpon>RegistrationNameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationPasswordView.cs" />
+    <Compile Include="Views\Registration\RegistrationPasswordView.designer.cs">
+      <DependentUpon>RegistrationPasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CreatePost\CreatePostViewController.cs" />
+    <Compile Include="Controllers\CreatePost\CreatePostViewController.designer.cs">
+      <DependentUpon>CreatePostViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CreatePost\ToolsViewController.cs" />
+    <Compile Include="Controllers\CreatePost\ToolsViewController.designer.cs">
+      <DependentUpon>ToolsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreatePost\CreatePostToolsView.cs" />
+    <Compile Include="Views\CreatePost\CreatePostToolsView.designer.cs">
+      <DependentUpon>CreatePostToolsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DataSources\ToolsDataSource.cs" />
+    <Compile Include="Views\CreatePost\Tools\PickerDataModel.cs" />
+    <Compile Include="Views\CreatePost\Tools\ImagePickerDispatcher.cs" />
+    <Compile Include="Cells\PostCardViewCell.cs" />
+    <Compile Include="Cells\PostCardViewCell.designer.cs">
+      <DependentUpon>PostCardViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationPhoneNumberView.cs" />
+    <Compile Include="Views\Registration\RegistrationPhoneNumberView.designer.cs">
+      <DependentUpon>RegistrationPhoneNumberView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registration\RegPhoneNumberViewController.cs" />
+    <Compile Include="Controllers\Registration\RegPhoneNumberViewController.designer.cs">
+      <DependentUpon>RegPhoneNumberViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MoreOptions\MoreOptionsViewController.cs" />
+    <Compile Include="Controllers\MoreOptions\MoreOptionsViewController.designer.cs">
+      <DependentUpon>MoreOptionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoreOptions\MoreOptionsView.cs" />
+    <Compile Include="Views\MoreOptions\MoreOptionsView.designer.cs">
+      <DependentUpon>MoreOptionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DataSources\MoreOptionsDataSourse.cs" />
+    <Compile Include="Cells\ToolViewCell.cs" />
+    <Compile Include="Cells\ToolViewCell.designer.cs">
+      <DependentUpon>ToolViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Theme\ThemeHelper.cs" />
+    <Compile Include="Theme\NativeTheme.cs" />
+    <Compile Include="Tools\HideShowKeyboard.cs" />
+    <Compile Include="Tools\FacebookLoginResultHandler.cs" />
+    <Compile Include="Cells\Interfaces\IToolViewCell.cs" />
+    <Compile Include="CollectionView\TableViewMoreOptions.cs" />
+    <Compile Include="CollectionView\TableViewMoreOptions.designer.cs">
+      <DependentUpon>TableViewMoreOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\ProfileTableViewCell.cs" />
+    <Compile Include="Cells\ProfileTableViewCell.designer.cs">
+      <DependentUpon>ProfileTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoreOptions\ProfileCellView\ProfileCellView.cs" />
+    <Compile Include="Views\MoreOptions\ProfileCellView\ProfileCellView.designer.cs">
+      <DependentUpon>ProfileCellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoreOptions\ToolBarBackView.cs" />
+    <Compile Include="Routers\MoreOptions\RouterToolBarBack.cs" />
+    <Compile Include="Tools\UISpinnerView.cs" />
+    <Compile Include="Views\Post\Header\PostSimpleHeaderView.cs" />
+    <Compile Include="Views\Post\Header\PostSimpleHeaderView.designer.cs">
+      <DependentUpon>PostSimpleHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditProfile\EditProfileView.cs" />
+    <Compile Include="Views\EditProfile\EditProfileView.designer.cs">
+      <DependentUpon>EditProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routers\MoreOptions\RouterEditProfile.cs" />
+    <Compile Include="Tools\Interfaces\IGettableViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Images\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images.xcassets\.imageset\" />
+    <Folder Include="Resources\Images.xcassets\123.imageset\" />
+    <Folder Include="Resources\Images.xcassets\arrowBackBlack24.imageset\" />
+    <Folder Include="Resources\Images.xcassets\arrowDownRed18.imageset\" />
+    <Folder Include="Resources\Images.xcassets\arrowUpGreen18.imageset\" />
+    <Folder Include="Resources\Images.xcassets\avatar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\defaultAvatar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ImageSplash.imageset\" />
+    <Folder Include="Resources\Images.xcassets\offline.imageset\" />
+    <Folder Include="Resources\Images.xcassets\online.imageset\" />
+    <Folder Include="Resources\Images.xcassets\rightArrow.imageset\" />
+    <Folder Include="Resources\Images.xcassets\rightArrowTransparent.imageset\" />
+    <Folder Include="Resources\Images.xcassets\rightGreenArrow.imageset\" />
+    <Folder Include="Resources\Images.xcassets\starBlack24.imageset\" />
+    <Folder Include="Resources\Images.xcassets\starBorderBlack24.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Images\qwe.png" />
+    <BundleResource Include="Images\investarena_logo.png" />
+    <BundleResource Include="Images\auth_background.png" />
+    <BundleResource Include="Images\invest_fon.jpg" />
+    <BundleResource Include="Images\auth_background_1.png" />
+    <BundleResource Include="Images\auth_background_2.png" />
+    <BundleResource Include="Images\ic_fb_login_48dp.png" />
+    <BundleResource Include="Images\ic_google_login_48dp.png" />
+    <BundleResource Include="Images\ic_ok_login_48dp.png" />
+    <BundleResource Include="Images\ic_vk_login_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialTrading\SocialTrading.csproj">
+      <Project>{7f3b2f22-9ef0-48a2-bf77-5b9c772ee5ed}</Project>
+      <Name>SocialTrading</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

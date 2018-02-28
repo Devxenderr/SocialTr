@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="BYZ-38-t0r" customClass="AuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2751" customClass="AuthView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2751" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="3392"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2751" secondAttribute="leading" constant="20" id="3393"/>
+                            <constraint firstItem="2751" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="3395"/>
+                            <constraint firstItem="2751" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="59279"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_authView" destination="2751" id="name-outlet-2751"/>
+                        <segue destination="906" kind="presentation" identifier="SegueReg" animates="NO" modalTransitionStyle="crossDissolve" id="1675"/>
+                        <segue destination="1709" kind="show" identifier="SegueForgot" id="1797"/>
+                        <segue destination="24460" kind="show" identifier="SegueFromAuthToPostsNavigation" id="27760"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-17"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="145">
+            <objects>
+                <viewController id="146" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="141"/>
+                        <viewControllerLayoutGuide type="bottom" id="142"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="147">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="319">
+                                <rect key="frame" x="20" y="20" width="374" height="667"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="319" firstAttribute="leading" secondItem="147" secondAttribute="leadingMargin" id="320"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="319" secondAttribute="trailing" id="321"/>
+                            <constraint firstItem="319" firstAttribute="bottom" secondItem="142" secondAttribute="top" id="322"/>
+                            <constraint firstItem="319" firstAttribute="top" secondItem="141" secondAttribute="bottom" id="323"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="148"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="149" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="-1228"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="150">
+            <objects>
+                <viewController storyboardIdentifier="PostsViewController" id="151" customClass="PostsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="143"/>
+                        <viewControllerLayoutGuide type="bottom" id="144"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="152">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5783" customClass="CollectionViewPosts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5785">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="144" firstAttribute="top" secondItem="5783" secondAttribute="bottom" id="5904"/>
+                            <constraint firstItem="5783" firstAttribute="trailing" secondItem="152" secondAttribute="trailingMargin" constant="20" id="6310"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="5783" secondAttribute="leading" constant="20" id="6947"/>
+                            <constraint id="79646" firstItem="5783" firstAttribute="top" secondItem="143" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" id="153"/>
+                    <navigationItem key="navigationItem" title="Title" id="5454"/>
+                    <connections>
+                        <outlet property="_postsCollectionView" destination="5783" id="name-outlet-5783"/>
+                        <segue destination="2852" kind="show" id="57172"/>
+                        <segue destination="3861" kind="show" id="65018"/>
+                        <segue id="113561" destination="113473" kind="show"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="154" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973" y="-1909"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="155">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="156" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="159">
+                        <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="146" kind="relationship" relationship="viewControllers" id="158"/>
+                        <segue destination="203" kind="relationship" relationship="viewControllers" id="248"/>
+                        <segue destination="253" kind="relationship" relationship="viewControllers" id="275"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="160" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="-13"/>
+        </scene>
+        <!--Deals-->
+        <scene sceneID="202">
+            <objects>
+                <viewController id="203" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="200"/>
+                        <viewControllerLayoutGuide type="bottom" id="201"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="204">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="326">
+                                <rect key="frame" x="20" y="20" width="374" height="667"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="326" firstAttribute="leading" secondItem="204" secondAttribute="leadingMargin" id="327"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="326" secondAttribute="trailing" id="328"/>
+                            <constraint firstItem="326" firstAttribute="top" secondItem="200" secondAttribute="bottom" id="329"/>
+                            <constraint firstItem="326" firstAttribute="bottom" secondItem="201" secondAttribute="top" id="330"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Deals" id="247"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="205" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="-596"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="252">
+            <objects>
+                <viewController id="253" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="250"/>
+                        <viewControllerLayoutGuide type="bottom" id="251"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="254">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="331">
+                                <rect key="frame" x="20" y="20" width="374" height="667"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="331" firstAttribute="leading" secondItem="254" secondAttribute="leadingMargin" id="332"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="331" secondAttribute="trailing" id="333"/>
+                            <constraint firstItem="331" firstAttribute="bottom" secondItem="251" secondAttribute="top" id="335"/>
+                            <constraint firstItem="331" firstAttribute="top" secondItem="250" secondAttribute="bottom" id="336"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="274"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="255" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="72"/>
+        </scene>
+        <!--Reg Name View Controller-->
+        <scene sceneID="905">
+            <objects>
+                <viewController id="906" customClass="RegNameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="903"/>
+                        <viewControllerLayoutGuide type="bottom" id="904"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="907">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2775" customClass="RegistrationName">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2775" firstAttribute="trailing" secondItem="907" secondAttribute="trailingMargin" constant="20" id="3338"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2775" secondAttribute="leading" constant="20" id="3339"/>
+                            <constraint firstItem="2775" firstAttribute="bottom" secondItem="904" secondAttribute="top" id="3341"/>
+                            <constraint firstItem="2775" firstAttribute="top" secondItem="907" secondAttribute="top" id="59278"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_registrationName" destination="2775" id="name-outlet-2775"/>
+                        <segue destination="3176" kind="presentation" identifier="SegueRegPhoneNumber" animates="NO" modalTransitionStyle="crossDissolve" id="3206"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SegueFromRegToAuth" animates="NO" modalTransitionStyle="crossDissolve" id="4134"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="908" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="737"/>
+        </scene>
+        <!--Почта-->
+        <scene sceneID="1109">
+            <objects>
+                <viewController id="1110" customClass="RegEmailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1107"/>
+                        <viewControllerLayoutGuide type="bottom" id="1108"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1111">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2783" customClass="RegistrationEmail">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2783" firstAttribute="trailing" secondItem="1111" secondAttribute="trailingMargin" constant="20" id="3364"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2783" secondAttribute="leading" constant="20" id="3365"/>
+                            <constraint firstItem="2783" firstAttribute="bottom" secondItem="1111" secondAttribute="bottom" id="3366"/>
+                            <constraint firstItem="2783" firstAttribute="top" secondItem="1111" secondAttribute="top" id="59283"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Почта" id="1142"/>
+                    <connections>
+                        <outlet property="_registrationEmail" destination="2783" id="name-outlet-2783"/>
+                        <segue destination="1164" kind="presentation" identifier="SegueRegPass" animates="NO" modalTransitionStyle="crossDissolve" id="2153"/>
+                        <segue destination="3176" kind="presentation" identifier="SegueFromRegEmailToPhone" animates="NO" modalTransitionStyle="crossDissolve" id="4256"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1112" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2928" y="542"/>
+        </scene>
+        <!--Пароль-->
+        <scene sceneID="1163">
+            <objects>
+                <viewController id="1164" customClass="RegPassViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1161"/>
+                        <viewControllerLayoutGuide type="bottom" id="1162"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1165">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2794" customClass="RegistrationPassword">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2794" firstAttribute="trailing" secondItem="1165" secondAttribute="trailingMargin" constant="20" id="3368"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2794" secondAttribute="leading" constant="20" id="3369"/>
+                            <constraint firstItem="2794" firstAttribute="bottom" secondItem="1165" secondAttribute="bottom" id="3370"/>
+                            <constraint firstItem="2794" firstAttribute="top" secondItem="1165" secondAttribute="top" id="59284"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Пароль" id="1232"/>
+                    <connections>
+                        <outlet property="_registrationPassword" destination="2794" id="name-outlet-2794"/>
+                        <segue destination="2461" kind="presentation" identifier="SegueRegUserAgreement" animates="NO" modalTransitionStyle="crossDissolve" id="2505"/>
+                        <segue destination="1110" kind="presentation" identifier="SegueFromRegPassToEmail" animates="NO" modalTransitionStyle="crossDissolve" id="4228"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1166" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3964" y="-68"/>
+        </scene>
+        <!--Forgot Pass View Controller-->
+        <scene sceneID="1708">
+            <objects>
+                <viewController id="1709" customClass="ForgotPassViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1706"/>
+                        <viewControllerLayoutGuide type="bottom" id="1707"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="17445">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17496" customClass="ForgotPassView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="17496" secondAttribute="leading" constant="20" id="17673"/>
+                            <constraint firstItem="17496" firstAttribute="trailing" secondItem="17445" secondAttribute="trailingMargin" constant="20" id="17699"/>
+                            <constraint firstItem="17496" firstAttribute="bottom" secondItem="17445" secondAttribute="bottom" constant="20" id="17725"/>
+                            <constraint firstItem="17496" firstAttribute="top" secondItem="17445" secondAttribute="top" id="59377"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_forgotPassView" destination="17496" id="name-outlet-17496"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SegueFromForgotToAuth" id="13711"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1711" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="-679"/>
+        </scene>
+        <!--User Agreement View Controller-->
+        <scene sceneID="2460">
+            <objects>
+                <viewController id="2461" customClass="UserAgreementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2458"/>
+                        <viewControllerLayoutGuide type="bottom" id="2459"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2462">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2830" customClass="UserAgreementView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="2830" secondAttribute="leading" constant="20" id="3371"/>
+                            <constraint firstItem="2830" firstAttribute="trailing" secondItem="2462" secondAttribute="trailingMargin" constant="20" id="3372"/>
+                            <constraint firstItem="2830" firstAttribute="bottom" secondItem="2459" secondAttribute="top" id="3373"/>
+                            <constraint firstItem="2830" firstAttribute="top" secondItem="2462" secondAttribute="top" id="59282"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_userAgreementView" destination="2830" id="name-outlet-2830"/>
+                        <segue destination="1164" kind="presentation" identifier="SegueFromAgreementToRegPass" animates="NO" modalTransitionStyle="crossDissolve" id="4176"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2463" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2865" y="1452"/>
+        </scene>
+        <!--Create Post-->
+        <scene sceneID="2851">
+            <objects>
+                <viewController storyboardIdentifier="CreatePost" id="2852" customClass="CreatePostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2849"/>
+                        <viewControllerLayoutGuide type="bottom" id="2850"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2853">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2856" customClass="CreatePostView">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="70394" firstItem="2856" firstAttribute="leading" secondItem="2853" secondAttribute="leadingMargin" constant="-20"/>
+                            <constraint id="71120" firstItem="2853" firstAttribute="trailingMargin" secondItem="2856" secondAttribute="trailing" constant="-20"/>
+                            <constraint id="75519" firstItem="2856" firstAttribute="top" secondItem="2849" secondAttribute="bottom"/>
+                            <constraint id="78571" firstItem="2850" firstAttribute="top" secondItem="2856" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Post" id="3835"/>
+                    <connections>
+                        <outlet property="_createPostView" destination="2856" id="name-outlet-2856"/>
+                        <segue destination="3010" kind="show" id="57202"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2854" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2875" y="-1874"/>
+        </scene>
+        <!--Select tool-->
+        <scene sceneID="3009">
+            <objects>
+                <viewController storyboardIdentifier="ToolsList" id="3010" customClass="ToolsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3007"/>
+                        <viewControllerLayoutGuide type="bottom" id="3008"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3011">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3029" customClass="CreatePostToolsView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3029" firstAttribute="trailing" secondItem="3011" secondAttribute="trailingMargin" constant="20" id="55082"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3029" secondAttribute="leading" constant="20" id="55083"/>
+                            <constraint firstItem="3029" firstAttribute="bottom" secondItem="3011" secondAttribute="bottom" id="55084"/>
+                            <constraint firstItem="3029" firstAttribute="top" secondItem="3007" secondAttribute="bottom" id="55085"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select tool" id="3839"/>
+                    <connections>
+                        <outlet property="toolsView" destination="3029" id="name-outlet-3029"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3012" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2875" y="-2627"/>
+        </scene>
+        <!--Номер телефона-->
+        <scene sceneID="3175">
+            <objects>
+                <viewController id="3176" customClass="RegPhoneNumberViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3173"/>
+                        <viewControllerLayoutGuide type="bottom" id="3174"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3177">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3274" customClass="RegistrationPhoneNumberView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3274" firstAttribute="trailing" secondItem="3177" secondAttribute="trailingMargin" constant="20" id="3359"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3274" secondAttribute="leading" constant="20" id="3360"/>
+                            <constraint firstItem="3274" firstAttribute="bottom" secondItem="3177" secondAttribute="bottom" id="3362"/>
+                            <constraint firstItem="3274" firstAttribute="top" secondItem="3177" secondAttribute="top" id="59280"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Номер телефона" id="3296"/>
+                    <connections>
+                        <outlet property="_registrationPhoneNumber" destination="3274" id="name-outlet-3274"/>
+                        <segue destination="1110" kind="presentation" identifier="SegueRegEmail" animates="NO" modalTransitionStyle="crossDissolve" id="3256"/>
+                        <segue destination="906" kind="presentation" identifier="SegueFromRegPhoneToName" animates="NO" modalTransitionStyle="crossDissolve" id="4278"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3178" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008" y="1049"/>
+        </scene>
+        <!--More Options View Controller-->
+        <scene sceneID="3860">
+            <objects>
+                <viewController storyboardIdentifier="MoreOptionsViewController" id="3861" customClass="MoreOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3858"/>
+                        <viewControllerLayoutGuide type="bottom" id="3859"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3862">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3966" customClass="MoreOptionsView">
+                                <rect key="frame" x="4" y="20" width="592" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3966" firstAttribute="top" secondItem="3858" secondAttribute="bottom" id="3967"/>
+                            <constraint firstItem="3859" firstAttribute="top" secondItem="3966" secondAttribute="bottom" id="3968"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3966" secondAttribute="leading" constant="16" id="3969"/>
+                            <constraint firstItem="3966" firstAttribute="trailing" secondItem="3862" secondAttribute="trailingMargin" constant="16" id="3970"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_moreOptionsView" destination="3966" id="name-outlet-3966"/>
+                        <segue id="101013" destination="81086" kind="show"/>
+                        <segue id="106450" destination="105120" kind="show"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3863" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2879" y="-1166"/>
+        </scene>
+        <!--Detailed Post View Controller-->
+        <scene sceneID="18222">
+            <objects>
+                <viewController storyboardIdentifier="DetailedPost" id="18223" customClass="DetailedPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="65459"/>
+                        <viewControllerLayoutGuide type="bottom" id="65460"/>
+                    </layoutGuides>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="53008">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="53009">
+                                <rect key="frame" x="0.0" y="28" width="414" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="53009" id="53010">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <connections>
+                        <outlet property="_rootTableView" destination="53008" id="name-outlet-53008"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18225" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="-1830"/>
+        </scene>
+        <!--Posts-->
+        <scene sceneID="24459">
+            <objects>
+                <navigationController id="24460" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Posts" id="25855"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="24462">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="151" kind="relationship" relationship="rootViewController" id="25344"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24463" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="-2728"/>
+        </scene>
+        <scene sceneID="81085">
+            <objects>
+                <viewController id="81086" sceneMemberID="viewController" customClass="EditContactViewController" storyboardIdentifier="EditContact">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="81083"/>
+                        <viewControllerLayoutGuide type="bottom" id="81084"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="81087">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="100651" customClass="EditContactView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="101069" firstItem="100651" firstAttribute="top" secondItem="81083" secondAttribute="bottom"/>
+                            <constraint id="101286" firstItem="81084" firstAttribute="top" secondItem="100651" secondAttribute="bottom"/>
+                            <constraint id="102606" firstItem="100651" firstAttribute="trailing" secondItem="81087" secondAttribute="trailingMargin" constant="20"/>
+                            <constraint id="102661" firstItem="81087" firstAttribute="leadingMargin" secondItem="100651" secondAttribute="leading" constant="20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_editContactView" destination="100651" id="name-outlet-100651"/>
+                        <segue id="103959" destination="103803" kind="show"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81088" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3372" y="-1149"/>
+        </scene>
+        <scene sceneID="103802">
+            <objects>
+                <viewController id="103803" sceneMemberID="viewController" customClass="CountriesViewController" storyboardIdentifier="CountriesViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="103800"/>
+                        <viewControllerLayoutGuide type="bottom" id="103801"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="103804">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="112124" customClass="CreatePostToolsView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="112125" firstItem="112124" firstAttribute="top" secondItem="103800" secondAttribute="bottom"/>
+                            <constraint id="112126" firstItem="103801" firstAttribute="top" secondItem="112124" secondAttribute="bottom"/>
+                            <constraint id="112127" firstItem="103804" firstAttribute="leadingMargin" secondItem="112124" secondAttribute="leading" constant="20"/>
+                            <constraint id="112128" firstItem="112124" firstAttribute="trailing" secondItem="103804" secondAttribute="trailingMargin" constant="20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_countriesView" destination="112124" id="name-outlet-112124"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="103805" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3856" y="-1159"/>
+        </scene>
+        <scene sceneID="105119">
+            <objects>
+                <viewController id="105120" sceneMemberID="viewController" customClass="EditProfileViewController" storyboardIdentifier="ProfileEdit">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="105117"/>
+                        <viewControllerLayoutGuide type="bottom" id="105118"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="105121">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="106491" customClass="EditProfileView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="107757" firstItem="105118" firstAttribute="top" secondItem="106491" secondAttribute="bottom"/>
+                            <constraint id="107797" firstItem="106491" firstAttribute="top" secondItem="105117" secondAttribute="bottom"/>
+                            <constraint id="108744" firstItem="106491" firstAttribute="trailing" secondItem="105121" secondAttribute="trailingMargin" constant="20"/>
+                            <constraint id="108784" firstItem="106491" firstAttribute="leading" secondItem="105121" secondAttribute="leadingMargin" constant="-20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_editProfileView" destination="106491" id="name-outlet-106491"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="105122" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="-1980"/>
+        </scene>
+        <scene sceneID="113472">
+            <objects>
+                <viewController id="113473" sceneMemberID="viewController" customClass="UpdatePostViewController" storyboardIdentifier="UpdatePost">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="113470"/>
+                        <viewControllerLayoutGuide type="bottom" id="113471"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="113474">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="114018" customClass="UpdatePostView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="114019" firstItem="114018" firstAttribute="top" secondItem="113470" secondAttribute="bottom"/>
+                            <constraint id="114020" firstItem="113471" firstAttribute="top" secondItem="114018" secondAttribute="bottom"/>
+                            <constraint id="114021" firstItem="114018" firstAttribute="trailing" secondItem="113474" secondAttribute="trailingMargin" constant="20"/>
+                            <constraint id="114022" firstItem="113474" firstAttribute="leadingMargin" secondItem="114018" secondAttribute="leading" constant="20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_updatePostView" destination="114018" id="name-outlet-114018"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="113475" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="-2660"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="rightArrowTransparent" width="96" height="96"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+        <image name="arrowBackBlack24" width="24" height="24"/>
+        <image name="arrowBackWhite24" width="24" height="24"/>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="ArrowUpRed18" width="36" height="36"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="761" height="1347"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="contactsMoreOptions36" width="36" height="36"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="arrowDownRed18" width="36" height="36"/>
+        <image name="arrowUpGreen18" width="36" height="36"/>
+    </resources>
+</document>

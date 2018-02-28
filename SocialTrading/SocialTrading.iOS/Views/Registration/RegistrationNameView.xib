@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationName">
+            <connections>
+                <outlet property="_backImageButton" destination="2734" id="name-outlet-2734"/>
+                <outlet property="_featureImage" destination="2742" id="name-outlet-2742"/>
+                <outlet property="_featureText" destination="2743" id="name-outlet-2743"/>
+                <outlet property="_firstNameEditText" destination="990" id="name-outlet-990"/>
+                <outlet property="_lastNameEditText" destination="1004" id="name-outlet-1004"/>
+                <outlet property="_lastNameLabel" destination="1013" id="name-outlet-1013"/>
+                <outlet property="_logoImage" destination="2653" id="name-outlet-2653"/>
+                <outlet property="_nameHeader" destination="988" id="name-outlet-988"/>
+                <outlet property="_nameLabel" destination="1009" id="name-outlet-1009"/>
+                <outlet property="_nextButton" destination="989" id="name-outlet-989"/>
+                <outlet property="_rootView" destination="1" id="name-outlet-1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EnterName and first name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="988">
+                    <rect key="frame" x="216" y="155" width="168" height="17"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_enterName_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="990">
+                    <rect key="frame" x="30" y="216.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_name_editText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="DidEndFirstNameEditText:" destination="-1" eventType="editingDidEnd" id="2626"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1009">
+                    <rect key="frame" x="33" y="149" width="312" height="15"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_name_textView_ios"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1013">
+                    <rect key="frame" x="30" y="204" width="315" height="15"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_lastname_textView_ios"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="2731"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1004">
+                    <rect key="frame" x="30" y="271.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_lastname_editText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="DidEndLastNameEditText:" destination="-1" eventType="editingDidEnd" id="2627"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="989">
+                    <rect key="frame" x="30" y="326.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_follow_phone_button"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="TouchUpInsideButtonNext:" destination="-1" eventType="touchUpInside" id="2625"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2653">
+                    <rect key="frame" x="210" y="60" width="180" height="65"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_logo_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="2775"/>
+                        <constraint firstAttribute="width" constant="180" id="2776"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2734">
+                    <rect key="frame" x="15" y="25" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_back_imageButton"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="BackButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2739"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2742" misplaced="YES">
+                    <rect key="frame" x="255" y="459" width="90" height="80"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_featureImage_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2743">
+                    <rect key="frame" x="200" y="554.5" width="200" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" label="regName_featureText_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2772"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2653" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2709"/>
+                <constraint firstItem="2653" firstAttribute="top" secondItem="1" secondAttribute="top" constant="60" id="2710"/>
+                <constraint firstItem="988" firstAttribute="top" secondItem="2653" secondAttribute="bottom" constant="30" id="2713"/>
+                <constraint firstItem="988" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2714"/>
+                <constraint firstItem="1009" firstAttribute="top" secondItem="988" secondAttribute="bottom" constant="30" id="2715"/>
+                <constraint firstItem="1009" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="33" id="2716"/>
+                <constraint firstAttribute="trailing" secondItem="1009" secondAttribute="trailing" constant="30" id="2717"/>
+                <constraint firstItem="990" firstAttribute="top" secondItem="1009" secondAttribute="bottom" id="2719"/>
+                <constraint firstItem="1009" firstAttribute="leading" secondItem="990" secondAttribute="leading" constant="3" id="2720"/>
+                <constraint firstItem="990" firstAttribute="trailing" secondItem="1009" secondAttribute="trailing" id="2721"/>
+                <constraint firstItem="1013" firstAttribute="top" secondItem="990" secondAttribute="bottom" constant="10" id="2722"/>
+                <constraint firstItem="1009" firstAttribute="leading" secondItem="1013" secondAttribute="leading" constant="3" id="2723"/>
+                <constraint firstItem="1009" firstAttribute="trailing" secondItem="1013" secondAttribute="trailing" id="2724"/>
+                <constraint firstItem="1004" firstAttribute="top" secondItem="1013" secondAttribute="bottom" id="2725"/>
+                <constraint firstItem="1009" firstAttribute="leading" secondItem="1004" secondAttribute="leading" constant="3" id="2726"/>
+                <constraint firstItem="1004" firstAttribute="trailing" secondItem="1009" secondAttribute="trailing" id="2727"/>
+                <constraint firstItem="989" firstAttribute="top" secondItem="1004" secondAttribute="bottom" constant="25" id="2728"/>
+                <constraint firstItem="1009" firstAttribute="leading" secondItem="989" secondAttribute="leading" constant="3" id="2729"/>
+                <constraint firstItem="989" firstAttribute="trailing" secondItem="1009" secondAttribute="trailing" id="2730"/>
+                <constraint firstItem="2734" firstAttribute="top" secondItem="1" secondAttribute="top" constant="25" id="2735"/>
+                <constraint firstItem="2734" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="2736"/>
+                <constraint firstAttribute="bottom" secondItem="2743" secondAttribute="bottom" constant="25" id="2744"/>
+                <constraint firstItem="2743" firstAttribute="top" secondItem="2742" secondAttribute="bottom" constant="15" id="2747"/>
+                <constraint firstItem="2743" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2751"/>
+                <constraint firstItem="2742" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2754"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="1242" height="2208"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="likeBluePost24" width="24" height="24"/>
+        <image name="likeGrayPost24" width="24" height="24"/>
+        <image name="logoInvestArena" width="599" height="232"/>
+        <image name="MoreOptionsButton" width="24" height="24"/>
+        <image name="moreVertBlack24" width="24" height="24"/>
+        <image name="odnoklassnikiLogin48" width="72" height="72"/>
+        <image name="offline" width="970" height="970"/>
+        <image name="online" width="970" height="970"/>
+        <image name="regEmailLogo" width="60" height="57"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+    </resources>
+</document>

@@ -1,0 +1,614 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{7F3B2F22-9EF0-48A2-BF77-5B9C772EE5ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SocialTrading</RootNamespace>
+    <AssemblyName>SocialTrading</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Mock|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Mock\</OutputPath>
+    <DefineConstants>DEBUG;MOCK</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseDeployTestFlight|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\ReleaseDeployTestFlight</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BuildUITestCI|AnyCPU'">
+    <OutputPath>bin\BuildUITestCI\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BuildUITestCI|iPhone'">
+    <OutputPath>bin\iPhone\BuildUITestCI\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Connection\ConnectionControllerMOCK.cs" />
+    <Compile Include="Connection\Contact.cs" />
+    <Compile Include="Connection\ConnectionController.cs" />
+    <Compile Include="Connection\Dispatcher\SuccessCodes.cs" />
+    <Compile Include="Connection\Handlers\ConnectSenderRor.cs" />
+    <Compile Include="Connection\Handlers\ConnectSenderWidget.cs" />
+    <Compile Include="Connection\Interfaces\IConnectable.cs" />
+    <Compile Include="Connection\Interfaces\IContact.cs" />
+    <Compile Include="Connection\Interfaces\IContactCreator.cs" />
+    <Compile Include="Connection\Interfaces\IModel.cs" />
+    <Compile Include="Connection\Interfaces\IQcUpdates.cs" />
+    <Compile Include="Connection\Interfaces\IRestWebConnection.cs" />
+    <Compile Include="Connection\Interfaces\ISender.cs" />
+    <Compile Include="Connection\Interfaces\ISocketWebConnection.cs" />
+    <Compile Include="Connection\Interfaces\ITokenFail.cs" />
+    <Compile Include="Connection\Interfaces\ITypeConnection.cs" />
+    <Compile Include="Connection\Interfaces\IConnectionSender.cs" />
+    <Compile Include="Connection\Interfaces\ISocketConnector.cs" />
+    <Compile Include="Connection\Interfaces\ISocketModelConnector.cs" />
+    <Compile Include="Connection\Interfaces\IWebConnection.cs" />
+    <Compile Include="Connection\Markers\BrokerSocketMarker.cs" />
+    <Compile Include="Connection\Models\RestHeaderModel.cs" />
+    <Compile Include="Connection\InternetConnectivity\Connectivity.cs" />
+    <Compile Include="Connection\Markers\RestRorMarker.cs" />
+    <Compile Include="Connection\Markers\WidgetSocketMarker.cs" />
+    <Compile Include="DTO\Interfaces\IEditContactEntity.cs" />
+    <Compile Include="DTO\Interfaces\IEditProfileEntity.cs" />
+    <Compile Include="DTO\Interfaces\IUserInfo.cs" />
+    <Compile Include="DTO\QcBidAsk.cs" />
+    <Compile Include="DTO\Request\EditContact\UserInfoDTO.cs" />
+    <Compile Include="DTO\Request\FacebookUserAuth.cs" />
+    <Compile Include="DTO\Request\Posts\CreateSimplePostRequestModel.cs" />
+    <Compile Include="DTO\Request\Posts\DeletePostRequestModel.cs" />
+    <Compile Include="DTO\Request\Posts\MorePostsRequestModel.cs" />
+    <Compile Include="DTO\Request\Posts\PostLikeRequestModel.cs" />
+    <Compile Include="DTO\Request\Posts\UpdatePostRequestModel.cs" />
+    <Compile Include="DTO\Request\RA\EmailModel.cs" />
+    <Compile Include="DTO\Request\RA\UserAuth.cs" />
+    <Compile Include="DTO\Request\RA\UserReg.cs" />
+    <Compile Include="DTO\Request\RA\LogOutModel.cs" />
+    <Compile Include="DTO\Request\WidgetModel.cs" />
+    <Compile Include="DTO\Request\UserInfoRequestModel.cs" />
+    <Compile Include="DTO\Response\ARoRResponse.cs" />
+    <Compile Include="DTO\Response\IModelResponse.cs" />
+    <Compile Include="DTO\Response\Post\DataModelUpdatePost.cs" />
+    <Compile Include="DTO\Response\UserSettings\DataModelProfileCell.cs" />
+    <Compile Include="DTO\Response\UserSettings\EUserSettingsResponseState.cs" />
+    <Compile Include="Vipers\Controllers\EditProfileController.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IOptionsProfileResponseStatus.cs" />
+    <Compile Include="DTO\Response\Post\ConstituentParts\PostHeaderUserModel.cs" />
+    <Compile Include="DTO\Request\Posts\PostsRequestModel.cs" />
+    <Compile Include="DTO\Response\Post\DataModelCreatePost.cs" />
+    <Compile Include="DTO\Request\Posts\CurrentPostIdRequest.cs" />
+    <Compile Include="DTO\Response\Post\DataModelDeletePost.cs" />
+    <Compile Include="DTO\Response\Post\DataModelListPosts.cs" />
+    <Compile Include="DTO\Response\Qc\DataModelListQc.cs" />
+    <Compile Include="DTO\Response\Post\DataModelOnePost.cs" />
+    <Compile Include="DTO\Response\Qc\DataModelQc.cs" />
+    <Compile Include="DTO\Response\RA\DataModelAuth.cs" />
+    <Compile Include="DTO\Response\RA\DataRecoveryPasswordResponse.cs" />
+    <Compile Include="DTO\Response\RA\UserAuthData.cs" />
+    <Compile Include="DTO\Response\Response.cs" />
+    <Compile Include="DTO\Response\WidgetResponse\Enumerations\ESocketCMDAnswer.cs" />
+    <Compile Include="DTO\Response\WidgetResponse\Enumerations\ESocketModuleAnswer.cs" />
+    <Compile Include="DTO\Response\WidgetResponse\WidgetResponse.cs" />
+    <Compile Include="DTO\Response\UserSettings\DataModelUserInfo.cs" />
+    <Compile Include="Locale\Modules\IAlert.cs" />
+    <Compile Include="DTO\Response\Post\DataModelPostLike.cs" />
+    <Compile Include="Locale\Modules\IEditContact.cs" />
+    <Compile Include="ResourceCountries.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceCountries.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Locale\Modules\IEditProfile.cs" />
+    <Compile Include="ResourceStyles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceStyles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DataForMoreOptions.cs" />
+    <Compile Include="Service\DataService.cs" />
+    <Compile Include="Connection\Enumerations\ERestCommands.cs" />
+    <Compile Include="Connection\Enumerations\EServer.cs" />
+    <Compile Include="Connection\Handlers\RestRor.cs" />
+    <Compile Include="Connection\Handlers\SocketWidget.cs" />
+    <Compile Include="Connection\Handlers\ARest.cs" />
+    <Compile Include="Connection\Handlers\ASocket.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryCountries.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryEditProfile.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryEditContact.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryController.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryMoreOptions.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryRestHeader.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryUpdatePost.cs" />
+    <Compile Include="Service\Repositories\RepositoryUpdatePost.cs" />
+    <Compile Include="Service\Repositories\RepositoryCountries.cs" />
+    <Compile Include="Service\Repositories\RepositoryThemes.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryThemes.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryUserAuth.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryNames.cs" />
+    <Compile Include="Service\DateTimeConverter.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryQcPrice.cs" />
+    <Compile Include="Service\Interfaces\Timer\IDateTimeConverter.cs" />
+    <Compile Include="Service\Interfaces\Timer\IGlobalTimer.cs" />
+    <Compile Include="Service\Interfaces\Timer\ITickNotification.cs" />
+    <Compile Include="Service\RegistrationErrorMessagesHandler.cs" />
+    <Compile Include="Service\GlobalTimer.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationCenterPostSocial.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationCenterPostHeader.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationCenterPostBody.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationCenter.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationCenterQc.cs" />
+    <Compile Include="Service\Interfaces\Notifications\INotificationMessage.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryCreatePost.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryPost.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryQc.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryRA.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryUser.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryUserSettings.cs" />
+    <Compile Include="Service\Repositories\RepositoryQc.cs" />
+    <Compile Include="Service\Repositories\RepositoryUserAuth.cs" />
+    <Compile Include="Service\Repositories\RepositoryUserSettings.cs" />
+    <Compile Include="Service\RepositoryController.cs" />
+    <Compile Include="ThemesStyles\Implementation\AGlobalControlsTheme.cs" />
+    <Compile Include="ThemesStyles\GetStylesResource.cs" />
+    <Compile Include="ThemesStyles\Interfaces\Button\IButtonTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\Button\IButtonThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\Button\IButtonThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\Button\IButtonThemeIOS.cs" />
+    <Compile Include="ThemesStyles\Interfaces\EditText\IEditTextTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\EditText\IEditTextThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\EditText\IEditTextThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\EditText\IEditTextThemeIOS.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageButton\IImageButtonTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageButton\IImageButtonThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageButton\IImageButtonThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageButton\IImageButtonThemeIOS.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageView\IImageViewTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageView\IImageViewThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageView\IImageViewThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\ImageView\IImageViewThemeIOS.cs" />
+    <Compile Include="ThemesStyles\Interfaces\TextView\ITextViewTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\TextView\ITextViewThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\TextView\ITextViewThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\TextView\ITextViewThemeIOS.cs" />
+    <Compile Include="ThemesStyles\Interfaces\View\IViewTheme.cs" />
+    <Compile Include="ThemesStyles\Interfaces\View\IViewThemeCommon.cs" />
+    <Compile Include="ThemesStyles\Interfaces\View\IViewThemeDroid.cs" />
+    <Compile Include="ThemesStyles\Interfaces\View\IViewThemeIOS.cs" />
+    <Compile Include="ThemesStyles\ThemeParser.cs" />
+    <Compile Include="Theme\Interfaces\IThemeKeyStringsTools.cs" />
+    <Compile Include="Theme\Interfaces\Post\IThemeKeyStringsPostOther.cs" />
+    <Compile Include="Theme\ThemeHolder.cs" />
+    <Compile Include="Theme\ThemeStrings\CreatePostThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\PostHeaderThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\PostStatisticsThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\PostSocialThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\PostBodyThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\PostOtherThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\RegThemeStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\ToolsThemeStrings.cs" />
+    <Compile Include="Tools\CamelPos.cs" />
+    <Compile Include="Tools\DictionaryForOptions.cs" />
+    <Compile Include="Tools\Enumerations\EControllerStatus.cs" />
+    <Compile Include="Tools\Enumerations\EItemsOptions.cs" />
+    <Compile Include="Tools\Enumerations\EMarketTypes.cs" />
+    <Compile Include="Tools\Enumerations\EPostsRequestType.cs" />
+    <Compile Include="Tools\Exceptions\DataModelAuthNullReferenceException.cs" />
+    <Compile Include="Tools\Exceptions\LazyUserAuthDataInvalidCastException.cs" />
+    <Compile Include="Tools\Exceptions\Parse\ParseException.cs" />
+    <Compile Include="Tools\Exceptions\RepoEditContactNullReferenceException.cs" />
+    <Compile Include="Tools\Exceptions\RepoUserAuthNullReferenceException.cs" />
+    <Compile Include="Tools\Interfaces\ICamelPos.cs" />
+    <Compile Include="Theme\Interfaces\IThemeKeyStringsCreatePost.cs" />
+    <Compile Include="Theme\Interfaces\IThemeKeyStringsPost.cs" />
+    <Compile Include="Theme\Interfaces\Post\IThemeKeyStringsPostSocial.cs" />
+    <Compile Include="Theme\Interfaces\Post\IThemeKeyStringsPostHeader.cs" />
+    <Compile Include="Theme\Interfaces\Post\IThemeKeyStringsPostBody.cs" />
+    <Compile Include="Theme\Interfaces\IThemeKeyStringsReg.cs" />
+    <Compile Include="Service\NotificationCenter.cs" />
+    <Compile Include="Service\Repositories\Repository.cs" />
+    <Compile Include="Connection\Dispatcher\WebMsgParser.cs" />
+    <Compile Include="Locale\ILang.cs" />
+    <Compile Include="Locale\LangEN.cs" />
+    <Compile Include="Locale\LangRU.cs" />
+    <Compile Include="Locale\Localization.cs" />
+    <Compile Include="Locale\Modules\IDeals.cs" />
+    <Compile Include="Locale\Modules\IFavorites.cs" />
+    <Compile Include="Locale\Modules\INotification.cs" />
+    <Compile Include="Locale\Modules\IPost.cs" />
+    <Compile Include="Locale\Modules\IRegAuth.cs" />
+    <Compile Include="DTO\Response\Post\Interfaces\IPostBodyModel.cs" />
+    <Compile Include="DTO\Response\Post\Interfaces\IPostChartModel.cs" />
+    <Compile Include="DTO\Response\Post\ConstituentParts\PostHeaderBrokerModel.cs" />
+    <Compile Include="DTO\Response\Post\Interfaces\IPostHeaderModel.cs" />
+    <Compile Include="DTO\Response\Post\Interfaces\IPostSocialModel.cs" />
+    <Compile Include="DTO\Response\Post\ConstituentParts\PostStatisticsModel.cs" />
+    <Compile Include="DTO\Response\Post\ConstituentParts\TradeModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Theme\Enumerators\EFontStyle.cs" />
+    <Compile Include="Theme\ThemeItems\ThemeColors.cs" />
+    <Compile Include="Theme\ThemeItems\ThemeFonts.cs" />
+    <Compile Include="Theme\ThemeItems\ThemeFontSize.cs" />
+    <Compile Include="Theme\ThemeItems\ThemeFontStyle.cs" />
+    <Compile Include="Theme\ThemeItems\ThemeImages.cs" />
+    <Compile Include="Theme\ThemeModel.cs" />
+    <Compile Include="Theme\Themes.cs" />
+    <Compile Include="Theme\Interfaces\IThemeKeyStringsAuth.cs" />
+    <Compile Include="Tools\Constants\RestHeaderValues.cs" />
+    <Compile Include="Tools\DAL.cs" />
+    <Compile Include="Connection\Enumerations\EResponseModule.cs" />
+    <Compile Include="Tools\Enumerations\EFragment.cs" />
+    <Compile Include="Tools\Enumerations\EResponseState.cs" />
+    <Compile Include="Tools\Enumerations\EState.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\Interfaces\IOptionCell.cs" />
+    <Compile Include="Tools\Interfaces\IProfileCell.cs" />
+    <Compile Include="Tools\Interfaces\ISearchHelper.cs" />
+    <Compile Include="Tools\Interfaces\ISetDataForMoreCells.cs" />
+    <Compile Include="Tools\Interfaces\ISpinneble.cs" />
+    <Compile Include="Tools\SearchHelper.cs" />
+    <Compile Include="Tools\Validation\Interfaces\IValidationCreatePost.cs" />
+    <Compile Include="Tools\Validation\Interfaces\IValidationEditContact.cs" />
+    <Compile Include="Tools\Validation\Interfaces\IValidationEditProfile.cs" />
+    <Compile Include="Tools\Validation\Interfaces\IValidationRA.cs" />
+    <Compile Include="Tools\Validation\ValidationCreatePost.cs" />
+    <Compile Include="Tools\Validation\ValidationEditContact.cs" />
+    <Compile Include="Tools\Validation\ValidationEditProfile.cs" />
+    <Compile Include="Tools\Validation\ValidationRA.cs" />
+    <Compile Include="Tools\Validation\Validation.cs" />
+    <Compile Include="Vipers\Authorization\EAuthResponseStatus.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\ISocialAuth.cs" />
+    <Compile Include="Vipers\Controllers\AuthController.cs" />
+    <Compile Include="Vipers\Authorization\Implementation\AuthStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Authorization\Implementation\AuthStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Authorization\Implementation\InteractorAuth.cs" />
+    <Compile Include="Tools\Enumerations\ESocialType.cs" />
+    <Compile Include="Vipers\Authorization\Implementation\PresenterAuthMOCK.cs" />
+    <Compile Include="Vipers\Controllers\EditContactController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IAuthController.cs" />
+    <Compile Include="Connection\Interfaces\IConnectionReciever.cs" />
+    <Compile Include="Connection\Interfaces\IGetData.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IAuthResponseStatus.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IAuthStylesHolder.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IRouterAuth.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IViewAuth.cs" />
+    <Compile Include="Vipers\Authorization\Implementation\PresenterAuth.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IInteractorAuth.cs" />
+    <Compile Include="Vipers\Authorization\Interfaces\IPresenterAuth.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IEditContactController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\ILogOutController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IMoreOptionsController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IEditProfileController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IOptionsProfileController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IUpdatePostController.cs" />
+    <Compile Include="Vipers\Controllers\LogOutController.cs" />
+    <Compile Include="Vipers\Controllers\MoreOptionsController.cs" />
+    <Compile Include="Vipers\Controllers\OptionsProfileController.cs" />
+    <Compile Include="Vipers\Controllers\UpdatePostController.cs" />
+    <Compile Include="Vipers\CreatePost\Implementation\CreatePostStylesHolderDroid.cs" />
+    <Compile Include="Vipers\CreatePost\Implementation\CreatePostStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IQuotationsController.cs" />
+    <Compile Include="Vipers\Controllers\QuotationsController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IOnePostController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IPostHeaderController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IPostSocialController.cs" />
+    <Compile Include="Vipers\Controllers\OnePostController.cs" />
+    <Compile Include="Vipers\Controllers\PostHeaderController.cs" />
+    <Compile Include="Vipers\Controllers\PostSocialController.cs" />
+    <Compile Include="Vipers\CreatePost\EPostResponseStatus.cs" />
+    <Compile Include="Vipers\Controllers\CreatePostController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\ICreatePostController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IPostsController.cs" />
+    <Compile Include="Vipers\Controllers\PostsController.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\ICreatePostResponseStatus.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\ICreatePostStylesHolder.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\IInteractorCreatePost.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\IPresenterCreatePost.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\IRouterCreatePost.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\IViewCreatePost.cs" />
+    <Compile Include="Vipers\CreatePost\Interfaces\IViewCreatePostToolBar.cs" />
+    <Compile Include="Vipers\EditContact\Implementation\EditContactStyleHolderDroid.cs" />
+    <Compile Include="Vipers\EditContact\Implementation\EditContactStyleHolderIOS.cs" />
+    <Compile Include="Vipers\EditContact\Implementation\PresenterEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Implementation\InteractorEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IEditContactStyleHolder.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IInteractorEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IPresenterEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IPresenterForInteractorEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IPresenterForViewEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IRouterEditContact.cs" />
+    <Compile Include="Vipers\EditContact\Interfaces\IViewEditContact.cs" />
+    <Compile Include="Vipers\Entity\EditProfileEntity.cs" />
+    <Compile Include="Vipers\Entity\EditContactEntity.cs" />
+    <Compile Include="Vipers\Entity\UpdatePostModel.cs" />
+    <Compile Include="Vipers\ForgotPass\Implementation\ForgotPassStylesHolderDroid.cs" />
+    <Compile Include="Vipers\ForgotPass\Implementation\ForgotPassStylesHolderIOS.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IForgotPassStylesHolder.cs" />
+    <Compile Include="Vipers\ForgotPass\EForgotPassStatus.cs" />
+    <Compile Include="Vipers\Controllers\ForgotPassController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IForgotPassController.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IForgotPassResponseStatus.cs" />
+    <Compile Include="Vipers\ModelCreators\EditProfileModelCreator.cs" />
+    <Compile Include="Vipers\ModelCreators\EditContactModelCreator.cs" />
+    <Compile Include="Vipers\ModelCreators\Interfaces\IEditProfileModelCreator.cs" />
+    <Compile Include="Vipers\ModelCreators\Interfaces\IEditContactModelCreator.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Implementation\EditProfileStylesHolderDroid.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Implementation\InteractorEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Implementation\PresenterEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Interfaces\IRouterEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Models\EEditProfileAlertType.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Models\EEditProfileFields.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Implementation\OptionsCellStylesHolderDroid.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Implementation\OptionsCellStylesHolderIOS.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Implementation\InteractorOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Implementation\PresenterOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IInteractorOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IOptionsCellStyleHolder.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IPresenterOptionsCellForInteractor.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IRouterOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Interfaces\IInteractorEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Interfaces\IPresenterEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Interfaces\IEditProfileStylesHolder.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Interfaces\IViewEditProfile.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Implementation\PresenterToolBarBack.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Implementation\ToolBarBackStylesHolderDroid.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Implementation\ToolBarBackStylesHolderIOS.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Interfaces\IRouterToolBarBack.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Interfaces\IToolBarBackStylesHolder.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Interfaces\IToolBarBackView.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IPresenterOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IPresenterOptionsCellForView.cs" />
+    <Compile Include="Vipers\MoreOptions\OptionsCell\Interfaces\IViewOptionsCell.cs" />
+    <Compile Include="Vipers\MoreOptions\ToolBar\Interfaces\IPresenterToolBarBack.cs" />
+    <Compile Include="Vipers\Post\Implementation\Body\PostBodyStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Post\Implementation\Body\PostBodyStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Body\IPostBodyStylesHolder.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Implementation\PresenterToolBarPosts.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Implementation\ToolBarPostsStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Implementation\ToolBarPostsStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Intarfaces\IPresenterToolBarPosts.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Intarfaces\IRouterToolBarPosts.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Intarfaces\IToolBarPostsStylesHolder.cs" />
+    <Compile Include="Vipers\Post\ToolBar\Intarfaces\IViewToolBarPosts.cs" />
+    <Compile Include="Vipers\ProfileCell\Implementation\InteractorProfileCell.cs" />
+    <Compile Include="Vipers\ProfileCell\Implementation\PresenterProfileCell.cs" />
+    <Compile Include="Vipers\ProfileCell\Implementation\ProfileCellStylesHolderDroid.cs" />
+    <Compile Include="Vipers\ProfileCell\Implementation\ProfileCellStylesHolderIOS.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IInteractorProfileCell.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IPresenterProfileCell.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IPresenterProfileCellForInteractor.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IPresenterProfileCellForView.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IProfileCellStylesHolder.cs" />
+    <Compile Include="Locale\Modules\IProfileCellLocale.cs" />
+    <Compile Include="Vipers\ProfileCell\Interfaces\IProfileCellView.cs" />
+    <Compile Include="Vipers\Qc\EQcResponseStatus.cs" />
+    <Compile Include="Vipers\Qc\IListQcResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Implementation\Header\EPostHeaderResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Implementation\Social\EPostSocialResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IPostHeaderResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IListPostsResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IPostsResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IPostSocialResponseStatus.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IRegResponseStatus.cs" />
+    <Compile Include="Vipers\Controllers\RegController.cs" />
+    <Compile Include="Vipers\Controllers\Interfaces\IRegController.cs" />
+    <Compile Include="Vipers\Registration\Password\ERegResponseStatus.cs" />
+    <Compile Include="Vipers\Post\Implementation\Header\PostHeaderStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Post\Implementation\Header\PostHeaderStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Post\Implementation\Social\PostSocialStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Post\Implementation\Social\PostSocialStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IPostHeaderStylesHolder.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IPostSocialStylesHolder.cs" />
+    <Compile Include="Vipers\Registration\Email\Implementation\RegEmailStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Registration\Email\Implementation\RegEmailStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Registration\Email\Interfaces\IRegEmailStylesHolder.cs" />
+    <Compile Include="Vipers\Registration\Name\Implementation\RegNameStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Registration\Name\Implementation\RegNameStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Registration\Name\Interfaces\IRegNameStylesHolder.cs" />
+    <Compile Include="Vipers\Registration\Password\Implementation\RegPassStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Registration\Password\Implementation\RegPassStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IRegPassStylesHolder.cs" />
+    <Compile Include="Vipers\Registration\Phone\Implementation\RegPhoneStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Registration\Phone\Implementation\RegPhoneStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Registration\Phone\Interfaces\IRegPhoneStylesHolder.cs" />
+    <Compile Include="Vipers\Tools\Implementation\Presenter\PresenterTools.cs" />
+    <Compile Include="Vipers\Tools\Implementation\ToolsStylesHolderDroid.cs" />
+    <Compile Include="Vipers\Tools\Implementation\ToolsStylesHolderIOS.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Presenter\IPresenterToolsSetTheme.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Router\IRouterTools.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\View\IToolsStylesHolder.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\View\IViewTools.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\View\IViewToolsTheme.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\View\IViewToolsBL.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Interactor\IInteractorToolForPresenter.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Interactor\IInteractorTools.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Interactor\IInteractorToolsBL.cs" />
+    <Compile Include="Vipers\Tools\Implementation\Interactor\InteractorTools.cs" />
+    <Compile Include="Vipers\Entity\CreatePostStrings.cs" />
+    <Compile Include="Vipers\Entity\RegistrationPhoneStrings.cs" />
+    <Compile Include="Vipers\Entity\ForecastTimeModel.cs" />
+    <Compile Include="Vipers\ForgotPass\Implementation\InteractorForgotPass.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IInteractorForgotPass.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IPresenterForgotPass.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IRouterForgotPass.cs" />
+    <Compile Include="Vipers\ForgotPass\Interfaces\IViewForgotPass.cs" />
+    <Compile Include="Vipers\ForgotPass\Implementation\PresenterForgotPass.cs" />
+    <Compile Include="DTO\IModelSend.cs" />
+    <Compile Include="Tools\Interfaces\ISubscriber.cs" />
+    <Compile Include="Vipers\Post\Implementation\Body\InteractorPostBody.cs" />
+    <Compile Include="Vipers\Post\Implementation\Chart\InteractorPostChart.cs" />
+    <Compile Include="Vipers\ModelCreators\PostHeaderBrokerModelCreator.cs" />
+    <Compile Include="Vipers\Post\Implementation\Header\InteractorPostHeader.cs" />
+    <Compile Include="Vipers\Post\Implementation\InteractorPost.cs" />
+    <Compile Include="Vipers\Post\Implementation\PresenterPost.cs" />
+    <Compile Include="Vipers\Post\Implementation\Social\InteractorPostSocial.cs" />
+    <Compile Include="Vipers\Post\Implementation\Statistics\InteractorPostStatistics.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Body\IRouterPostBody.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Chart\IRouterPostChart.cs" />
+    <Compile Include="Vipers\ModelCreators\Interfaces\IPostHeaderBrokerModelCreator.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IRouterPostHeader.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IViewDetailedPost.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IViewPost.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IRouterPost.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IInteractorPost.cs" />
+    <Compile Include="Vipers\Post\Interfaces\IPresenterPost.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IRouterPostSocial.cs" />
+    <Compile Include="Vipers\Registration\Email\Interfaces\IRouterRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Interfaces\IRouterRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IRouterRegPass.cs" />
+    <Compile Include="Vipers\Registration\Phone\Interfaces\IRouterRegPhone.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Presenter\IPresenterTools.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Presenter\IPresenterToolsForInteractor.cs" />
+    <Compile Include="Vipers\Tools\Interfaces\Presenter\IPresenterToolsForView.cs" />
+    <Compile Include="Vipers\Trade\Implementation\InteractorTrade.cs" />
+    <Compile Include="Vipers\Post\Implementation\Body\PresenterPostBody.cs" />
+    <Compile Include="Vipers\Post\Implementation\Chart\PresenterPostChart.cs" />
+    <Compile Include="Vipers\Post\Implementation\Header\PresenterPostHeader.cs" />
+    <Compile Include="Vipers\Post\Implementation\Social\PresenterPostSocial.cs" />
+    <Compile Include="Vipers\Post\Implementation\Statistics\PresenterPostStatistics.cs" />
+    <Compile Include="Vipers\Trade\Implementation\PresenterTrade.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Body\IInteractorPostBody.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Chart\IInteractorPostChart.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IInteractorPostHeader.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IInteractorPostSocial.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Statistics\IInteractorPostStatistics.cs" />
+    <Compile Include="Vipers\Trade\Interfaces\IInteractorTrade.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Body\IPresenterPostBody.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Chart\IPresenterPostChart.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IPresenterPostHeader.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IPresenterPostSocial.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Statistics\IPresenterPostStatistics.cs" />
+    <Compile Include="Vipers\Trade\Interfaces\IPresenterTrade.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Body\IViewPostBody.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Chart\IViewPostChart.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Header\IViewPostHeader.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Social\IViewPostSocial.cs" />
+    <Compile Include="Vipers\Post\Interfaces\Statistics\IViewPostStatistics.cs" />
+    <Compile Include="Vipers\Trade\Interfaces\IViewTrade.cs" />
+    <Compile Include="Vipers\Registration\Email\Implementation\InteractorRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Implementation\InteractorRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Implementation\InteractorRegPass.cs" />
+    <Compile Include="Vipers\Registration\Email\Implementation\PresenterRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Implementation\PresenterRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Implementation\PresenterRegPass.cs" />
+    <Compile Include="Connection\Interfaces\IConnectionMessage.cs" />
+    <Compile Include="Vipers\Registration\Email\Interfaces\IInteractorRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Interfaces\IInteractorRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IInteractorRegPass.cs" />
+    <Compile Include="Vipers\Registration\Email\Interfaces\IPresenterRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Interfaces\IPresenterRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IPresenterRegPass.cs" />
+    <Compile Include="Vipers\Registration\Email\Interfaces\IViewRegEmail.cs" />
+    <Compile Include="Vipers\Registration\Name\Interfaces\IViewRegName.cs" />
+    <Compile Include="Vipers\Registration\Password\Interfaces\IViewRegPass.cs" />
+    <Compile Include="Tools\Interfaces\ISetConfig.cs" />
+    <Compile Include="Vipers\Entity\RegistrationNamesStrings.cs" />
+    <Compile Include="Vipers\Entity\RegistrationPasswordStrings.cs" />
+    <Compile Include="DTO\Response\RA\DataModelReg.cs" />
+    <Compile Include="DTO\Response\Post\DataModelPost.cs" />
+    <Compile Include="Tools\Enumerations\EAccessMode.cs" />
+    <Compile Include="Tools\Enumerations\ELanguages.cs" />
+    <Compile Include="Tools\Enumerations\EMarket.cs" />
+    <Compile Include="Tools\Enumerations\EBuySell.cs" />
+    <Compile Include="Tools\Enumerations\EForecastTime.cs" />
+    <Compile Include="Vipers\CreatePost\Implementation\PresenterCreatePost.cs" />
+    <Compile Include="Vipers\CreatePost\Implementation\InteractorCreatePost.cs" />
+    <Compile Include="DTO\Request\Posts\CreatePostRequestModel.cs" />
+    <Compile Include="Locale\Modules\ICreatePost.cs" />
+    <Compile Include="Vipers\Registration\Phone\Interfaces\IViewRegPhone.cs" />
+    <Compile Include="Vipers\Registration\Phone\Interfaces\IPresenterRegPhone.cs" />
+    <Compile Include="Vipers\Registration\Phone\Interfaces\IInteractorRegPhone.cs" />
+    <Compile Include="Vipers\Registration\Phone\Implementation\PresenterRegPhone.cs" />
+    <Compile Include="Vipers\Registration\Phone\Implementation\InteractorRegPhone.cs" />
+    <Compile Include="Locale\Modules\IMoreOptions.cs" />
+    <Compile Include="Theme\ThemeKeyStrings.cs" />
+    <Compile Include="Theme\ThemeStrings\AuthThemeStrings.cs" />
+    <Compile Include="Locale\Modules\IToolbar.cs" />
+    <Compile Include="Service\Interfaces\Repository\IRepositoryToolbar.cs" />
+    <Compile Include="Vipers\UpdatePost\Implementation\InteractorUpdatePost.cs" />
+    <Compile Include="Vipers\UpdatePost\Implementation\PresenterUpdatePost.cs" />
+    <Compile Include="Vipers\UpdatePost\Implementation\UpdatePostStylesHolderIOS.cs" />
+    <Compile Include="Vipers\UpdatePost\Implementation\UpdatePostStylesHolderDroid.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IInteractorUpdatePost.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IPresenterUpdatePost.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IPresenterUpdatePostForInteractor.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IPresenterUpdatePostForView.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IRouterUpdatePost.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IUpdatePostStylesHolder.cs" />
+    <Compile Include="Vipers\UpdatePost\Interfaces\IViewUpdatePost.cs" />
+    <Compile Include="Vipers\MoreOptions\EditProfile\Implementation\EditProfileStylesHolderIOS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\netstandard1.0\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\netstandard1.0\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSockets.PCL, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Websockets.Pcl.1.1.9\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10\WebSockets.PCL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="ResourceCountries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceCountries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemesStyles\Styles\ViewStyles.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStyles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceStyles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\DataFiles\CountriesDictionary.txt" />
+    <Content Include="ThemesStyles\Styles\ButtonStyles.txt" />
+    <Content Include="ThemesStyles\Styles\ImageViewStyles.txt" />
+    <Content Include="ThemesStyles\Styles\ImageButtonStyles.txt" />
+    <Content Include="ThemesStyles\Styles\EditTextStyles.txt" />
+    <Content Include="ThemesStyles\Styles\TextViewStyles.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vipers\CreatePost\UpdatePost\Implementation\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

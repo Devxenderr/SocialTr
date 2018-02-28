@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <include
+        android:id="@+id/createPost_toolbar_toolbarOneButtonBack"
+        layout="@layout/ToolBarOneButtonBackUpdatePost" />
+    <ScrollView
+        android:id="@+id/createPost_scroll_scrollView"
+        android:fillViewport="true"
+        android:layout_below="@id/createPost_toolbar_toolbarOneButtonBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/createPost_profilePhoto_imageView"
+                android:layout_below="@id/createPost_toolbar_toolbarOneButtonBack"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/defaultAvatar" />
+            <TextView
+                android:id="@+id/createPost_profileName_textView"
+                android:layout_toEndOf="@id/createPost_profilePhoto_imageView"
+                android:text="Name"
+                android:gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                style="@style/RegTextView"
+                android:maxLines = "2"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:id="@+id/createPost_dividingLineHeader_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/createPost_profilePhoto_imageView"
+                android:background="@android:color/black" />
+            <TextView
+                android:id="@+id/createPost_tools_textView"
+                android:text="Tool"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/Black"
+                android:textColor="@color/White"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/createPost_dividingLineHeader_view"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                style="@style/RegTextView" />
+            <LinearLayout
+                android:id="@+id/createPost_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/createPost_tools_textView">
+                <TextView
+                    android:id="@+id/createPost_price_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:text="Price"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:gravity="left|center_vertical"
+                    style="@style/CreatePostTextView" />
+                <TextView
+                    android:id="@+id/createPost_buySell_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:text="I recommend"
+                    android:gravity="left|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    style="@style/CreatePostTextView" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/createPost_forecastTime_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/createPost_price_container">
+                <TextView
+                    android:id="@+id/createPost_time_textView"
+                    android:text="Time period"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    style="@style/CreatePostTextView" />
+                <TextView
+                    android:id="@+id/createPost_accessMode_textView"
+                    android:text="Access"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    style="@style/CreatePostTextView" />
+            </LinearLayout>
+            <View
+              android:id="@+id/createPost_dividingLineComment_view"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="10dp"
+              android:layout_below="@id/createPost_forecastTime_container"
+              android:background="@color/Black" />
+            <RelativeLayout
+                android:id="@+id/createPost_commentArea_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/createPost_dividingLineComment_view">
+                <RelativeLayout
+                    android:id="@+id/createPost_comment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp">
+                    <EditText
+                        android:id="@+id/createPost_comment_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textCursorDrawable="@null"
+                        android:maxHeight="250dp"
+                        android:background="@color/Transparent"
+                        android:hint="You recommend to generate profit by buying or selling (choose instrument)..."
+                        android:layout_marginBottom="50dp"
+                        style="@style/CommentsEditText" />
+                </RelativeLayout>
+              <RelativeLayout
+                android:id="@+id/createPost_attachmentArea_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/createPost_commentArea_relativeLayout">
+                <ImageView
+                    android:id="@+id/createPost_attachment_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/attachmentImageViewHeight"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/createPost_comment_container"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="0dp" />
+                <ImageView
+                    android:id="@+id/createPost_attachmentCancel_imageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignEnd="@id/createPost_attachment_imageView"
+                    android:layout_alignTop="@id/createPost_attachment_imageView"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="-5dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp" />
+                <ImageButton
+                    android:id="@+id/createPost_addImage_button"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/createPost_comment_container"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/Transparent" />
+            </RelativeLayout>
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<socialTrading.droid.views.moreOptions.ProfileCellView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/moreOptions_profileCell_profileCellView"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <ImageView
+      android:id="@+id/moreOptions_profile_imageView"
+      android:background="@drawable/corners"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_margin="10dp" />
+  <TextView
+      android:layout_marginTop="10dp"
+      android:id="@+id/moreOptions_nameTitle_textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/moreOptions_profile_imageView"
+      android:layout_alignParentTop="true"
+      android:text=""
+      android:maxLines = "2"
+      android:layout_marginRight="10dp"/>
+  <TextView
+      android:id="@+id/moreOptions_yourProfileLabel_textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:layout_alignStart="@id/moreOptions_nameTitle_textView"
+      android:layout_below="@id/moreOptions_nameTitle_textView"
+      android:text="" />
+</socialTrading.droid.views.moreOptions.ProfileCellView>

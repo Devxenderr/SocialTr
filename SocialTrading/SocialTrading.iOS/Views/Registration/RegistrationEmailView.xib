@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationEmail">
+            <connections>
+                <outlet property="_backImageButton" destination="2675" id="name-outlet-2675"/>
+                <outlet property="_emailEditText" destination="1145" id="name-outlet-1145"/>
+                <outlet property="_emailHeaderLabel" destination="1143" id="name-outlet-1143"/>
+                <outlet property="_emailLabel" destination="1144" id="name-outlet-1144"/>
+                <outlet property="_featureImage" destination="2681" id="name-outlet-2681"/>
+                <outlet property="_featureText" destination="2682" id="name-outlet-2682"/>
+                <outlet property="_logoImage" destination="2621" id="name-outlet-2621"/>
+                <outlet property="_nextButton" destination="1146" id="name-outlet-1146"/>
+                <outlet property="_rootView" destination="1" id="name-outlet-1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1143">
+                    <rect key="frame" x="264" y="155" width="72" height="17"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_enterEmail_textView"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1144">
+                    <rect key="frame" x="30" y="202" width="540" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_email_textView_ios"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1145">
+                    <rect key="frame" x="30" y="216.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_email_editText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="DidEndEmailEditText:" destination="-1" eventType="editingDidEnd" id="2599"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1146">
+                    <rect key="frame" x="30" y="271.5" width="540" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="reg_follow_pass_button"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="TouchUpInsideButtonNext:" destination="-1" eventType="touchUpInside" id="2598"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2621">
+                    <rect key="frame" x="210" y="60" width="180" height="65"/>
+                    <accessibility key="accessibilityConfiguration" label="regEmail_logo_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="2713"/>
+                        <constraint firstAttribute="height" constant="65" id="2714"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2675">
+                    <rect key="frame" x="15" y="25" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="regEmail_back_imageButton"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="BackButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="2678"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2681" misplaced="YES">
+                    <rect key="frame" x="180" y="411" width="240" height="128"/>
+                    <accessibility key="accessibilityConfiguration" label="regEmail_featureImage_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2682">
+                    <rect key="frame" x="200" y="554.5" width="200" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" label="regEmail_featureText_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2700"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2621" firstAttribute="top" secondItem="1" secondAttribute="top" constant="60" id="2622"/>
+                <constraint firstItem="2621" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2623"/>
+                <constraint firstItem="1143" firstAttribute="top" secondItem="2621" secondAttribute="bottom" constant="30" id="2651"/>
+                <constraint firstItem="1143" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2652"/>
+                <constraint firstItem="1144" firstAttribute="top" secondItem="1143" secondAttribute="bottom" constant="30" id="2664"/>
+                <constraint firstItem="1144" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="30" id="2665"/>
+                <constraint firstAttribute="trailing" secondItem="1144" secondAttribute="trailing" constant="30" id="2666"/>
+                <constraint firstItem="1145" firstAttribute="top" secondItem="1144" secondAttribute="bottom" id="2667"/>
+                <constraint firstItem="1145" firstAttribute="leading" secondItem="1144" secondAttribute="leading" id="2668"/>
+                <constraint firstItem="1145" firstAttribute="trailing" secondItem="1144" secondAttribute="trailing" id="2669"/>
+                <constraint firstItem="1146" firstAttribute="top" secondItem="1145" secondAttribute="bottom" constant="25" id="2670"/>
+                <constraint firstItem="1146" firstAttribute="leading" secondItem="1144" secondAttribute="leading" id="2671"/>
+                <constraint firstItem="1146" firstAttribute="trailing" secondItem="1144" secondAttribute="trailing" id="2672"/>
+                <constraint firstItem="2675" firstAttribute="top" secondItem="1" secondAttribute="top" id="2676" constant="25"/>
+                <constraint firstItem="2675" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="2677"/>
+                <constraint firstAttribute="bottom" secondItem="2682" secondAttribute="bottom" constant="25" id="2683"/>
+                <constraint firstItem="2682" firstAttribute="top" secondItem="2681" secondAttribute="bottom" constant="15" id="2686"/>
+                <constraint firstItem="2682" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2690"/>
+                <constraint firstItem="2681" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2703"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="1242" height="2208"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="likeBluePost24" width="24" height="24"/>
+        <image name="likeGrayPost24" width="24" height="24"/>
+        <image name="logoInvestArena" width="599" height="232"/>
+        <image name="MoreOptionsButton" width="24" height="24"/>
+        <image name="moreVertBlack24" width="24" height="24"/>
+        <image name="odnoklassnikiLogin48" width="72" height="72"/>
+        <image name="online" width="970" height="970"/>
+        <image name="regEmailLogo" width="60" height="57"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="offline" width="970" height="970"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+    </resources>
+</document>

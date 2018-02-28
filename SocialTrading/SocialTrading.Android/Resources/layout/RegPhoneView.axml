@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/regPhone_background_relativeLayout"
+    android:layout_width="match_parent"    
+    android:layout_height="match_parent">
+  <ImageView
+    android:id="@+id/regPhone_background_imageView"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+  <ImageButton
+    android:id="@+id/regPhone_back_imageButton"
+    style="@style/RegBackImageButton"/>
+  <ImageView
+    android:id="@+id/regPhone_logo_imageView"
+    style="@style/LogoImage" />
+  <TextView
+      android:id="@+id/reg_enterPhone_textView"
+      android:layout_below="@+id/regPhone_logo_imageView"
+      android:layout_marginTop="50dp"
+      style="@style/RegTextView" />
+  <LinearLayout
+      android:id="@+id/reg_phoneEditText_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_below="@+id/reg_enterPhone_textView">
+      <EditText
+          android:id="@+id/reg_phoneCountry_editText"
+          android:maxLength="5"
+          android:singleLine="true"
+          android:inputType="phone"
+          android:layout_marginEnd="0dp"
+          android:layout_weight="0.65"
+          style="@style/AuthEditText" />
+      <EditText
+          android:id="@+id/reg_phoneNumber_editText"
+          android:maxLength="16"
+          android:singleLine="true"
+          android:inputType="phone"
+          android:layout_weight="0.35"
+          style="@style/AuthEditText" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/reg_follow_email_button"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/reg_phoneEditText_layout"
+        style="@style/RegButton" />
+    <Button
+        android:id="@+id/reg_skip_phone_button"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/reg_follow_email_button"
+        style="@style/RegButton" />
+  <LinearLayout
+    android:id="@+id/regPhone_feature_relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp">
+      <ImageView
+         android:id="@+id/regPhone_featureImage_imageView"
+         android:layout_centerHorizontal="true"
+         style="@style/FeatureImage"/>
+    </RelativeLayout>
+    <TextView
+      android:id="@+id/regPhone_featureText_textView"
+      android:layout_alignParentBottom="true"
+      android:layout_below="@id/regPhone_featureImage_imageView"
+      style="@style/FeatureTextView"/>
+  </LinearLayout>
+</RelativeLayout>

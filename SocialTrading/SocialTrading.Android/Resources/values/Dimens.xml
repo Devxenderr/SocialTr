@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="authEditTextCorners">1dp</dimen>
+
+  <dimen name="authInputFontSize">18sp</dimen>
+  
+  <dimen name="authMarginBetweenControls">7dp</dimen>
+  <dimen name="authViewsPaddingLeftRight">15dp</dimen>
+
+  <dimen name="authEditTextMarginTopBottom">10dp</dimen>
+  <dimen name="authRegEditTextHeight">45dp</dimen>
+  <dimen name="authEditTextCorners">1dp</dimen>
+
+  <dimen name="authBtnHeight">55dp</dimen>
+  <dimen name="authBtnCorners">5dp</dimen>
+
+  <dimen name="authMarginSocialButtonsRightLeft">25dp</dimen>
+  <dimen name="authMarginSocialButtonsTopBottom">15dp</dimen>
+
+  <dimen name="authMarginSwitchAgreementTop">12dp</dimen>
+
+  <dimen name="regTextViewFontSize">16sp</dimen>
+  <dimen name="EditTextFontSize">16sp</dimen>
+  <dimen name="invalidTextViewFontSize">14sp</dimen>
+
+
+  <dimen name="commentTextSize">14sp</dimen>
+  <dimen name="commentMarginTop">15dp</dimen>
+  <dimen name="commentMarginStart">15dp</dimen>
+  <dimen name="commentMarginEnd">15dp</dimen>
+  <dimen name="commentMarginBottom">5dp</dimen>
+  
+  <dimen name="logoImageViewHeight">80dp</dimen>
+  <dimen name="featureImageViewHeight">70dp</dimen>
+  <dimen name="featureImageViewWidth">73dp</dimen>
+  <dimen name="attachmentImageViewHeight">40dp</dimen>
+
+  <dimen name="customToolbarHeight">56dp</dimen>
+
+</resources>

@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostView">
+            <connections>
+                <outlet property="_accessModeButton" destination="463" id="name-outlet-463"/>
+                <outlet property="_addImageButton" destination="54" id="name-outlet-54"/>
+                <outlet property="_anotherForecastTimeCancelButton" destination="647" id="name-outlet-647"/>
+                <outlet property="_anotherForecastTimeDayButton" destination="554" id="name-outlet-554"/>
+                <outlet property="_anotherForecastTimeDoneButton" destination="545" id="name-outlet-545"/>
+                <outlet property="_anotherForecastTimeHeaderView" destination="540" id="name-outlet-540"/>
+                <outlet property="_anotherForecastTimeHourButton" destination="566" id="name-outlet-566"/>
+                <outlet property="_anotherForecastTimeMinuteButton" destination="567" id="name-outlet-567"/>
+                <outlet property="_anotherForecastTimeMonthButton" destination="558" id="name-outlet-558"/>
+                <outlet property="_anotherForecastTimePickerView" destination="549" id="name-outlet-549"/>
+                <outlet property="_anotherForecastTimeTitleLabel" destination="651" id="name-outlet-651"/>
+                <outlet property="_anotherForecastTimeView" destination="534" id="name-outlet-534"/>
+                <outlet property="_anotherForecastTimeYearButton" destination="562" id="name-outlet-562"/>
+                <outlet property="_buySellButton" destination="456" id="name-outlet-456"/>
+                <outlet property="_commentBackgroundView" destination="592" id="name-outlet-592"/>
+                <outlet property="_commentDividingLineLabel" destination="365" id="name-outlet-365"/>
+                <outlet property="_commentHeaderLabel" destination="79" id="name-outlet-79"/>
+                <outlet property="_commentTextView" destination="49" id="name-outlet-49"/>
+                <outlet property="_forecastTimeButton" destination="461" id="name-outlet-461"/>
+                <outlet property="_headerDividingLineLabel" destination="314" id="name-outlet-314"/>
+                <outlet property="_nameLabel" destination="5" id="name-outlet-5"/>
+                <outlet property="_photoImageView" destination="4" id="name-outlet-4"/>
+                <outlet property="_pickerCancelButton" destination="636" id="name-outlet-636"/>
+                <outlet property="_pickerDoneButton" destination="518" id="name-outlet-518"/>
+                <outlet property="_pickerHeaderView" destination="513" id="name-outlet-513"/>
+                <outlet property="_pickerPickerView" destination="522" id="name-outlet-522"/>
+                <outlet property="_pickerTitleLabel" destination="640" id="name-outlet-640"/>
+                <outlet property="_pickerView" destination="506" id="name-outlet-506"/>
+                <outlet property="_priceButton" destination="442" id="name-outlet-442"/>
+                <outlet property="_rootView" destination="1" id="name-outlet-1"/>
+                <outlet property="_toolsButton" destination="14" id="name-outlet-14"/>
+                <outlet property="_attachmentImageView" destination="686" id="name-outlet-686"/>
+                <outlet property="_attachmentCancelButton" destination="697" id="name-outlet-697"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="592">
+                    <rect key="frame" x="0.0" y="328" width="600" height="272"/>
+                    <subviews/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="15" y="15" width="60" height="60"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_profilePhoto_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="119"/>
+                        <constraint firstAttribute="width" constant="60" id="120"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fufel Fuflov" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="90" y="15" width="324" height="20"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_profileName_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="608"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter comment :" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79">
+                    <rect key="frame" x="20" y="340" width="565" height="16.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                    <rect key="frame" x="15" y="100.5" width="384" height="50"/>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.47843137254901963" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_tools_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="297"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="TOOLS">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="ToolSelection_TouchUpInside:" destination="-1" eventType="touchUpInside" id="600"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="49" misplaced="YES">
+                    <rect key="frame" x="15" y="283" width="384" height="298"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_comment_editText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54">
+                    <rect key="frame" x="369" y="696" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_addImage_button"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="AddImageButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="602"/>
+                    </connections>
+                </button>
+                <label contentMode="scaleToFill" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="314">
+                    <rect key="frame" x="0.0" y="85" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="319"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="365">
+                    <rect key="frame" x="0.0" y="326.5" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="474"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="442">
+                    <rect key="frame" x="15" y="156.5" width="189" height="50"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_price_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="455"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="   Price">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="456">
+                    <rect key="frame" x="210" y="156.5" width="189" height="50"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_buySell_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="457"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="  I recommend"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="BuySellButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="604"/>
+                        <action selector="BuySell_ValueChanged:" destination="-1" eventType="valueChanged" id="4625"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="461">
+                    <rect key="frame" x="15" y="212.5" width="189" height="50"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_time_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="462"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="   Forecast time"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="ForecastTimeButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="589"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="463">
+                    <rect key="frame" x="210" y="212.5" width="189" height="50"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_accessMode_textView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="464"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="   Access"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="AccessModeButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="603"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="506">
+                    <rect key="frame" x="0.0" y="328" width="600" height="16"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="513">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="518">
+                                    <rect key="frame" x="373" y="0.0" width="31" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_done_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="PickerDoneButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="633"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="636">
+                                    <rect key="frame" x="10" y="0.0" width="41" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_cancel_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="PickerCancelButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="666"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="640">
+                                    <rect key="frame" x="195" y="0.0" width="24.5" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_label_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="517"/>
+                                <constraint firstItem="518" firstAttribute="top" secondItem="513" secondAttribute="top" id="519"/>
+                                <constraint firstAttribute="trailing" secondItem="518" secondAttribute="trailing" constant="10" id="520"/>
+                                <constraint firstAttribute="bottom" secondItem="518" secondAttribute="bottom" id="521"/>
+                                <constraint firstItem="636" firstAttribute="top" secondItem="513" secondAttribute="top" id="637"/>
+                                <constraint firstAttribute="bottom" secondItem="636" secondAttribute="bottom" id="638"/>
+                                <constraint firstItem="636" firstAttribute="leading" secondItem="513" secondAttribute="leading" constant="10" id="639"/>
+                                <constraint firstItem="640" firstAttribute="top" secondItem="513" secondAttribute="top" id="657"/>
+                                <constraint firstItem="640" firstAttribute="bottom" secondItem="513" secondAttribute="bottom" id="658"/>
+                                <constraint firstItem="640" firstAttribute="centerX" secondItem="513" secondAttribute="centerX" id="659"/>
+                            </constraints>
+                        </view>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="522">
+                            <rect key="frame" x="15" y="40" width="384" height="417"/>
+                            <accessibility key="accessibilityConfiguration" label="createPost_picker">
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="513" firstAttribute="leading" secondItem="506" secondAttribute="leading" id="514"/>
+                        <constraint firstItem="513" firstAttribute="top" secondItem="506" secondAttribute="top" id="515"/>
+                        <constraint firstItem="513" firstAttribute="trailing" secondItem="506" secondAttribute="trailing" id="516"/>
+                        <constraint firstItem="522" firstAttribute="bottom" secondItem="506" secondAttribute="bottom" id="523"/>
+                        <constraint firstItem="522" firstAttribute="leading" secondItem="506" secondAttribute="leading" constant="15" id="524"/>
+                        <constraint firstItem="522" firstAttribute="top" secondItem="513" secondAttribute="bottom" id="525"/>
+                        <constraint firstItem="522" firstAttribute="trailing" secondItem="506" secondAttribute="trailing" constant="-15" id="526"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="534" misplaced="YES">
+                    <rect key="frame" x="0.0" y="279" width="414" height="22"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="540">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="545">
+                                    <rect key="frame" x="373" y="0.0" width="31" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_done_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="AnotherForecastTimeDoneButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="675"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="647">
+                                    <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_cancel_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="AnotherForecastTimeCancelButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="674"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="651">
+                                    <rect key="frame" x="195" y="0.0" width="24.5" height="40"/>
+                                    <accessibility key="accessibilityConfiguration" label="createPost_label_picker"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="544"/>
+                                <constraint firstAttribute="bottom" secondItem="545" secondAttribute="bottom" id="546"/>
+                                <constraint firstItem="545" firstAttribute="top" secondItem="540" secondAttribute="top" id="547"/>
+                                <constraint firstAttribute="trailing" secondItem="545" secondAttribute="trailing" constant="10" id="548"/>
+                                <constraint firstAttribute="bottom" secondItem="647" secondAttribute="bottom" id="648"/>
+                                <constraint firstItem="647" firstAttribute="top" secondItem="540" secondAttribute="top" id="649"/>
+                                <constraint firstItem="647" firstAttribute="leading" secondItem="540" secondAttribute="leading" constant="10" id="650"/>
+                                <constraint firstItem="651" firstAttribute="top" secondItem="540" secondAttribute="top" id="652"/>
+                                <constraint firstAttribute="bottom" secondItem="651" secondAttribute="bottom" id="653"/>
+                                <constraint firstAttribute="centerX" secondItem="651" secondAttribute="centerX" id="654"/>
+                            </constraints>
+                        </view>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="549">
+                            <rect key="frame" x="15" y="40" width="192" height="417"/>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="554">
+                            <rect key="frame" x="222" y="157.5" width="177" height="30"/>
+                            <state key="normal" title="Day">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="AnotherForecastTimeDayButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="669"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="558">
+                            <rect key="frame" x="222" y="195.5" width="177" height="30"/>
+                            <state key="normal" title="Month">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="AnotherForecastTimeMonthButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="670"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="562">
+                            <rect key="frame" x="222" y="233.5" width="177" height="30"/>
+                            <state key="normal" title="Year">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="AnotherForecastTimeYearButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="671"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="566">
+                            <rect key="frame" x="222" y="271.5" width="177" height="30"/>
+                            <state key="normal" title="Hour">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="AnotherForecastTimeHourButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="672"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="567">
+                            <rect key="frame" x="222" y="309.5" width="177" height="30"/>
+                            <state key="normal" title="Minute">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="AnotherForecastTimeMinuteButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="673"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="540" secondAttribute="trailing" id="541"/>
+                        <constraint firstItem="540" firstAttribute="leading" secondItem="534" secondAttribute="leading" id="542"/>
+                        <constraint firstItem="540" firstAttribute="top" secondItem="534" secondAttribute="top" id="543"/>
+                        <constraint firstItem="549" firstAttribute="leading" secondItem="534" secondAttribute="leading" constant="15" id="550"/>
+                        <constraint firstItem="549" firstAttribute="top" secondItem="540" secondAttribute="bottom" id="551"/>
+                        <constraint firstAttribute="bottom" secondItem="549" secondAttribute="bottom" id="552"/>
+                        <constraint firstItem="549" firstAttribute="trailing" secondItem="540" secondAttribute="centerX" id="553"/>
+                        <constraint firstItem="554" firstAttribute="leading" secondItem="549" secondAttribute="trailing" constant="15" id="555"/>
+                        <constraint firstAttribute="trailing" secondItem="554" secondAttribute="trailing" constant="15" id="557"/>
+                        <constraint firstItem="558" firstAttribute="top" secondItem="554" secondAttribute="bottom" constant="8" id="559"/>
+                        <constraint firstItem="554" firstAttribute="leading" secondItem="558" secondAttribute="leading" id="560"/>
+                        <constraint firstItem="554" firstAttribute="trailing" secondItem="558" secondAttribute="trailing" id="561"/>
+                        <constraint firstItem="558" firstAttribute="trailing" secondItem="562" secondAttribute="trailing" id="563"/>
+                        <constraint firstItem="558" firstAttribute="leading" secondItem="562" secondAttribute="leading" id="564"/>
+                        <constraint firstItem="562" firstAttribute="top" secondItem="558" secondAttribute="bottom" constant="8" id="565"/>
+                        <constraint firstItem="562" firstAttribute="leading" secondItem="566" secondAttribute="leading" id="568"/>
+                        <constraint firstItem="562" firstAttribute="trailing" secondItem="566" secondAttribute="trailing" id="569"/>
+                        <constraint firstItem="566" firstAttribute="top" secondItem="562" secondAttribute="bottom" constant="8" id="570"/>
+                        <constraint firstItem="566" firstAttribute="leading" secondItem="567" secondAttribute="leading" id="571"/>
+                        <constraint firstItem="566" firstAttribute="trailing" secondItem="567" secondAttribute="trailing" id="572"/>
+                        <constraint firstItem="567" firstAttribute="top" secondItem="566" secondAttribute="bottom" constant="8" id="573"/>
+                        <constraint firstItem="549" firstAttribute="centerY" secondItem="562" secondAttribute="top" constant="15" id="581"/>
+                    </constraints>
+                </view>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="686" misplaced="YES" ambiguous="YES">
+                    <rect key="frame" x="70" y="673" width="80" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_attachment_imageView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint id="7829" firstItem="686" firstAttribute="height" constant="40"/>
+                    </constraints>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="697">
+                    <rect key="frame" x="158" y="660" width="18" height="18"/>
+                    <accessibility key="accessibilityConfiguration" label="createPost_attachmentCancel_imageView"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="697" secondAttribute="height" multiplier="1:1" id="698"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" image="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="AttachmentCancelButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="701"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="117"/>
+                <constraint firstItem="14" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="123"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="4" secondAttribute="trailing" constant="15" id="167"/>
+                <constraint firstItem="5" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="168"/>
+                <constraint firstItem="314" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="317"/>
+                <constraint firstAttribute="trailing" secondItem="314" secondAttribute="trailing" id="318"/>
+                <constraint firstItem="4" firstAttribute="bottom" secondItem="314" secondAttribute="top" constant="-10" id="320"/>
+                <constraint firstItem="14" firstAttribute="top" secondItem="314" secondAttribute="centerY" constant="15" id="322"/>
+                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="15" id="451"/>
+                <constraint firstItem="442" firstAttribute="leading" secondItem="14" secondAttribute="leading" id="452"/>
+                <constraint firstItem="442" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="6" id="453"/>
+                <constraint firstItem="14" firstAttribute="centerX" secondItem="442" secondAttribute="trailing" constant="3" id="454"/>
+                <constraint firstItem="14" firstAttribute="trailing" secondItem="456" secondAttribute="trailing" id="458"/>
+                <constraint firstItem="456" firstAttribute="leading" secondItem="14" secondAttribute="centerX" constant="3" id="459"/>
+                <constraint firstItem="456" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="6" id="460"/>
+                <constraint firstItem="463" firstAttribute="trailing" secondItem="456" secondAttribute="trailing" id="465"/>
+                <constraint firstItem="463" firstAttribute="leading" secondItem="456" secondAttribute="leading" id="466"/>
+                <constraint firstItem="461" firstAttribute="trailing" secondItem="442" secondAttribute="trailing" id="467"/>
+                <constraint firstItem="461" firstAttribute="leading" secondItem="442" secondAttribute="leading" id="468"/>
+                <constraint firstItem="461" firstAttribute="top" secondItem="442" secondAttribute="bottom" constant="6" id="469"/>
+                <constraint firstItem="463" firstAttribute="top" secondItem="456" secondAttribute="bottom" constant="6" id="470"/>
+                <constraint firstItem="365" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="471"/>
+                <constraint firstItem="365" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="472"/>
+                <constraint firstItem="365" firstAttribute="top" secondItem="461" secondAttribute="bottom" constant="15" id="473"/>
+                <constraint firstItem="506" firstAttribute="top" secondItem="365" secondAttribute="centerY" constant="1" id="507"/>
+                <constraint firstItem="506" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="508"/>
+                <constraint firstItem="506" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="509"/>
+                <constraint firstItem="534" firstAttribute="top" secondItem="365" secondAttribute="centerY" constant="1" id="535"/>
+                <constraint firstItem="534" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="536"/>
+                <constraint firstItem="534" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="537"/>
+                <constraint firstItem="592" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="593"/>
+                <constraint firstItem="592" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="594"/>
+                <constraint firstItem="592" firstAttribute="top" secondItem="365" secondAttribute="centerY" constant="1" id="596"/>
+                <constraint firstItem="79" firstAttribute="leading" secondItem="49" secondAttribute="leading" constant="5" id="622"/>
+                <constraint firstItem="79" firstAttribute="trailing" secondItem="49" secondAttribute="trailing" id="623"/>
+                <constraint firstItem="49" firstAttribute="leading" secondItem="592" secondAttribute="leading" constant="15" id="624"/>
+                <constraint firstItem="592" firstAttribute="trailing" secondItem="49" secondAttribute="trailing" constant="15" id="625"/>
+                <constraint firstItem="79" firstAttribute="top" secondItem="365" secondAttribute="centerY" constant="13" id="628"/>
+                <constraint firstItem="49" firstAttribute="top" secondItem="365" secondAttribute="centerY" constant="5" id="632"/>
+                <constraint firstAttribute="bottom" secondItem="534" secondAttribute="bottom" id="655"/>
+                <constraint firstAttribute="bottom" secondItem="506" secondAttribute="bottom" id="656"/>
+                <constraint firstItem="534" firstAttribute="bottom" secondItem="592" secondAttribute="bottom" id="704"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="4" secondAttribute="top" id="710"/>
+                <constraint id="6798" firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="15"/>
+                <constraint id="7830" firstItem="1" firstAttribute="bottom" secondItem="686" secondAttribute="bottom" constant="15"/>
+                <constraint id="7831" firstItem="686" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15"/>
+                <constraint id="7834" firstItem="697" firstAttribute="bottom" secondItem="686" secondAttribute="top" constant="10"/>
+                <constraint id="7835" firstItem="697" firstAttribute="trailing" secondItem="686" secondAttribute="trailing" constant="10"/>
+                <constraint id="7982" firstItem="1" firstAttribute="bottom" secondItem="54" secondAttribute="bottom" constant="10"/>
+                <constraint id="7983" firstItem="1" firstAttribute="trailing" secondItem="54" secondAttribute="trailing" constant="15"/>
+                <constraint id="7984" firstItem="54" firstAttribute="top" secondItem="49" secondAttribute="bottom" constant="10"/>
+            </constraints>
+            <point key="canvasLocation" x="-19.5" y="31.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Images/avatar.png" width="91" height="87"/>
+        <image name="Images/auth_background.png" width="1438" height="2546"/>
+        <image name="Images/auth_background_1.png" width="360" height="637"/>
+        <image name="Images/auth_background_2.png" width="389" height="688"/>
+        <image name="Images/ic_fb_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_google_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_ok_login_48dp.png" width="72" height="72"/>
+        <image name="Images/ic_vk_login_48dp.png" width="72" height="72"/>
+        <image name="Images/invest_fon.jpg" width="722" height="1280"/>
+        <image name="Images/investarena_logo.png" width="599" height="232"/>
+        <image name="Images/qwe.png" width="63" height="41"/>
+        <image name="arrowBackWhite36" width="36" height="36"/>
+        <image name="arrowDownBlack24" width="48" height="48"/>
+        <image name="arrowDownBlackCreatePost24" width="13" height="24"/>
+        <image name="ArrowDownGreen18" width="36" height="36"/>
+        <image name="arrowUpBlack24" width="48" height="48"/>
+        <image name="ArrowUpRed18" width="36" height="36"/>
+        <image name="attachImageCreatePost36" width="36" height="36"/>
+        <image name="backgroundRA" width="761" height="1347"/>
+        <image name="Cancel" width="18" height="18"/>
+        <image name="cancelAttach18" width="18" height="18"/>
+        <image name="commentGrayPost24" width="24" height="24"/>
+        <image name="contactsMoreOptions36" width="36" height="36"/>
+        <image name="defaultAvatar" width="600" height="601"/>
+        <image name="facebookLogin48" width="72" height="72"/>
+        <image name="googleLogin48" width="72" height="72"/>
+        <image name="likeBluePost24" width="24" height="24"/>
+        <image name="likeGrayPost24" width="24" height="24"/>
+        <image name="logoInvestArena" width="599" height="232"/>
+        <image name="logoutMoreOptions36" width="36" height="36"/>
+        <image name="menuBlack24" width="24" height="24"/>
+        <image name="MoreOptionsButton" width="24" height="24"/>
+        <image name="moreVertBlack24" width="24" height="24"/>
+        <image name="odnoklassnikiLogin48" width="72" height="72"/>
+        <image name="offline" width="970" height="970"/>
+        <image name="online" width="970" height="970"/>
+        <image name="profileSettingsMoreOptions36" width="36" height="36"/>
+        <image name="regEmailLogo" width="60" height="57"/>
+        <image name="regNameLogo" width="60" height="57"/>
+        <image name="regPassLogo" width="60" height="57"/>
+        <image name="regPhoneLogo" width="60" height="53"/>
+        <image name="rightArrow" width="640" height="320"/>
+        <image name="rightArrowTransparent" width="96" height="96"/>
+        <image name="rightGreenArrow" width="960" height="480"/>
+        <image name="shareGrayPost24" width="24" height="24"/>
+        <image name="starBlack24" width="36" height="36"/>
+        <image name="starBorderBlack24" width="36" height="36"/>
+        <image name="vkontakteLogin48" width="72" height="72"/>
+    </resources>
+</document>

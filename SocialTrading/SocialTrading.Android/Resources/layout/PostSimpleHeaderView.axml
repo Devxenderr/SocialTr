@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<socialTrading.droid.views.PostSimpleHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_postHeader_simplelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/postHeader_userAvatar_imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/defaultAvatar"
+        style="@style/PostHeaderElementsStyle" /> 
+    <TextView
+        android:id="@+id/postHeader_userFirstName_textView"
+        android:layout_toRightOf="@+id/postHeader_userAvatar_imageView"
+        android:layout_toLeftOf="@+id/postHeader_options_button"
+        style="@style/PostHeaderElementsStyle"
+        android:maxLines="2"      
+        android:text=""/>
+    <TextView
+        android:id="@+id/postHeader_postDate_textView"
+        android:layout_below="@+id/postHeader_userFirstName_textView"
+        android:layout_toRightOf="@+id/postHeader_userAvatar_imageView"
+        style="@style/PostHeaderElementsStyle"
+        android:text="" />
+    <ImageButton
+        android:id="@+id/postHeader_options_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="0dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp" 
+        style="@style/PostHeaderElementsStyle" />
+</socialTrading.droid.views.PostSimpleHeaderView>

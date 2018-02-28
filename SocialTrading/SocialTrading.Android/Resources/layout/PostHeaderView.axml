@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<socialTrading.droid.views.PostHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_postHeader_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/postHeader_userAvatar_imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/defaultAvatar"
+        style="@style/PostHeaderElementsStyle" />
+
+    <TextView
+        android:id="@+id/postHeader_userFirstName_textView"
+        android:layout_toRightOf="@+id/postHeader_userAvatar_imageView"
+        style="@style/PostHeaderElementsStyle"
+        android:maxLines="2"
+        android:layout_toLeftOf="@+id/postHeader_forecastTimeValue_textView"
+       
+        android:text="Name"/>
+
+    <TextView
+        android:id="@+id/postHeader_postDate_textView"
+        android:layout_below="@+id/postHeader_userFirstName_textView"
+        android:layout_toRightOf="@+id/postHeader_userAvatar_imageView"
+        style="@style/PostHeaderElementsStyle"
+        android:text="" />
+
+    <ImageButton
+        android:id="@+id/postHeader_options_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="0dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp" 
+        style="@style/PostHeaderElementsStyle" />
+
+    <TextView
+        android:id="@+id/postHeader_forecastTimeValue_textView"
+        style="@style/PostHeaderElementsStyle"
+        android:text=""
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/postHeader_options_button" />
+
+    <ImageButton
+        android:id="@+id/postHeader_favorites_button"
+        style="@style/PostHeaderElementsStyle" />
+
+    <ImageView
+        android:id="@+id/postHeader_arrow_imageView"
+        android:layout_alignBottom="@+id/postHeader_currentPriceValue_textView"
+        android:layout_alignTop="@+id/postHeader_currentPriceValue_textView"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/PostHeaderElementsStyle"/>
+
+    <TextView
+        android:id="@+id/postHeader_currentPriceValue_textView"
+        android:layout_below="@+id/postHeader_BrokerLayout"
+        android:layout_toRightOf="@+id/postHeader_arrow_imageView"
+        style="@style/PostHeaderElementsStyle"
+        android:text="- - -"/>
+
+    <ImageView
+        android:id="@+id/postHeader_userStatus_imageView"
+        style="@style/PostHeaderElementsStyle" />
+
+    <TextView
+        android:id="@+id/postHeader_difference_textView"
+        android:text=""
+        style="@style/PostHeaderElementsStyle"
+        android:layout_toLeftOf="@+id/postHeader_diffValue_textView"
+        android:layout_alignBaseline="@+id/postHeader_currentPriceValue_textView" />
+
+    <TextView
+        android:id="@+id/postHeader_diffValue_textView"
+        android:layout_toLeftOf="@+id/postHeader_options_button"
+        style="@style/PostHeaderElementsStyle"
+        android:text="- - -"
+        android:layout_alignBaseline="@+id/postHeader_currentPriceValue_textView"/>
+
+    <RelativeLayout
+        android:id="@+id/postHeader_BrokerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postHeader_userAvatar_imageView"
+        android:layout_toRightOf="@+id/postHeader_favorites_button">
+
+        <TextView
+            android:id="@+id/postHeader_tool_textView"
+            android:layout_marginTop="5dp"
+            style="@style/PostHeaderElementsStyle"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/postHeader_BuySellLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" >
+          
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/postHeader_buySell_textView"
+                    style="@style/PostHeaderElementsStyle"
+                    android:text=""
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_toRightOf="@id/postHeader_buySell_textView"
+                    android:id="@+id/postHeader_buySellValue_textView"
+                    style="@style/PostHeaderElementsStyle"
+                    android:text="- - -"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_toRightOf="@id/postHeader_buySellValue_textView"
+                    android:id="@+id/postHeader_buySell_imageView"
+                    style="@style/PostHeaderArrowStyle"/>
+
+        </RelativeLayout>
+    
+    </RelativeLayout>
+
+</socialTrading.droid.views.PostHeaderView>

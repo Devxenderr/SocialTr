@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/regName_background_relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+      android:id="@+id/regName_background_imageView"
+      android:adjustViewBounds="true"
+      android:scaleType="fitXY"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/regName_back_imageButton"
+        style="@style/RegBackImageButton" />
+    <ImageView
+        android:id="@+id/regName_logo_imageView"
+        style="@style/LogoImage" />
+    <TextView
+        android:id="@+id/reg_enterName_textView"
+        android:layout_below="@+id/regName_logo_imageView"
+        android:layout_marginTop="50dp"
+        style="@style/RegTextView" />
+    <EditText
+        android:id="@+id/reg_name_editText"
+        android:layout_below="@+id/reg_enterName_textView"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        style="@style/AuthEditText" />
+    <EditText
+        android:id="@+id/reg_lastname_editText"
+        android:layout_below="@+id/reg_name_editText"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        style="@style/AuthEditText" />
+    <Button
+        android:id="@+id/reg_follow_phone_button"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/reg_lastname_editText"
+        style="@style/RegButton" />
+  
+  <LinearLayout
+    android:id="@+id/regName_feature_relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp">
+       <ImageView
+          android:id="@+id/regName_featureImage_imageView"
+          android:layout_centerHorizontal="true"
+          style="@style/FeatureImage"/> 
+    </RelativeLayout>
+      <TextView
+        android:id="@+id/regName_featureText_textView"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/regName_featureImage_imageView"
+        style="@style/FeatureTextView"/>
+    </LinearLayout>
+</RelativeLayout>

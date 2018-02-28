@@ -1,0 +1,99 @@
+﻿namespace SocialTrading.Theme.ThemeStrings
+{
+    public class PostHeaderThemeStrings
+    {
+        public string AvatarImage { get; internal set; }
+        public string MoreOptionsButtonImage { get; internal set; }
+        public string FavoriteButtonImageActive { get; internal set; }
+        public string FavoriteButtonImageNone { get; internal set; }
+        public string BuySellImageRed { get; internal set; }
+        public string BuySellImageGreen { get; internal set; }
+        public string CurrentPriceUpImage { get; internal set; }
+        public string CurrentPriceDownImage { get; internal set; }
+        public string UserStatusOnlineImage { get; internal set; }
+        public string UserStatusOfflineImage { get; internal set; }
+        public string FirstLastNameTextColor { get; internal set; }
+        public string FirstLastNameTextSize { get; internal set; }
+        public string FirstLastNameTextFontStyle { get; internal set; }
+        public string DateTextColor { get; internal set; }
+        public string DateTextSize { get; internal set; }
+        public string DateTextFontStyle { get; internal set; }
+        public string QuoteTextFontStyle { get; internal set; }
+        public string QuoteTextColor { get; internal set; }
+        public string QuoteTextSize { get; internal set; }
+        public string BuySellTextFontStyle { get; internal set; }
+        public string BuySellTextColor { get; internal set; }
+        public string BuySellTextSize { get; internal set; }
+        public string ForecastTextFontStyle { get; internal set; }
+        public string ForecastTextColor { get; internal set; }
+        public string ForecastTextSize { get; internal set; }
+        public string CurrentPriceTextFontStyle { get; internal set; }
+        public string CurrentPriceTextColor { get; internal set; }
+        public string CurrentPriceTextSize { get; internal set; }
+        public string DiffTextFontStyle { get; internal set; }
+        public string DiffTextColor { get; internal set; }
+        public string DiffTextSize { get; internal set; }
+        public string DiffValueTextFontStyle { get; internal set; }
+        public string DiffValueTextColorPositive { get; internal set; }
+        public string DiffValueTextColorNegative { get; internal set; }
+        public string DiffValueTextSize { get; internal set; }
+        public string PostTextBackground { get; internal set; }
+
+        public PostHeaderThemeStrings(string avatarImage, string moreOptionsButtonImage, string favoriteButtonImageActive,
+                                      string favoriteButtonImageNone, string buySellImageRed, string buySellImageGreen,
+                                      string currentPriceUpImage, string currentPriceDownImage, string userStatusOnlineImage,
+                                      string userStatusOfflineImage, string firstLastNameTextColor, string firstLastNameTextSize,
+                                      string firstLastNameTextFontStyle, string dateTextColor, string dateTextSize,
+                                      string dateTextFontStyle, string quoteTextFontStyle, string quoteTextColor,
+                                      string quoteTextSize, string buySellTextFontStyle, string buySellTextColor,
+                                      string buySellTextSize, string forecastTextFontStyle, string forecastTextColor,
+                                      string forecastTextSize, string currentPriceTextFontStyle, string currentPriceTextColor,
+                                      string currentPriceTextSize, string diffTextFontStyle, string diffTextColor,
+                                      string diffTextSize, string diffValueTextFontStyle, string diffValueTextColorPositive,
+                                      string diffValueTextColorNegative, string diffValueTextSize, string postTextBackground)
+        {
+            AvatarImage = avatarImage;
+            MoreOptionsButtonImage = moreOptionsButtonImage;
+            FavoriteButtonImageActive = favoriteButtonImageActive;
+            FavoriteButtonImageNone = favoriteButtonImageNone;
+            BuySellImageRed = buySellImageRed;
+            BuySellImageGreen = buySellImageGreen;
+            CurrentPriceUpImage = currentPriceUpImage;
+            CurrentPriceDownImage = currentPriceDownImage;
+            UserStatusOnlineImage = userStatusOnlineImage;
+            UserStatusOfflineImage = userStatusOfflineImage;
+            FirstLastNameTextColor = firstLastNameTextColor;
+            FirstLastNameTextSize = firstLastNameTextSize;
+            FirstLastNameTextFontStyle = firstLastNameTextFontStyle;
+            DateTextColor = dateTextColor;
+            DateTextSize = dateTextSize;
+            DateTextFontStyle = dateTextFontStyle;
+            QuoteTextFontStyle = quoteTextFontStyle;
+            QuoteTextColor = quoteTextColor;
+            QuoteTextSize = quoteTextSize;
+            BuySellTextFontStyle = buySellTextFontStyle;
+            BuySellTextColor = buySellTextColor;
+            BuySellTextSize = buySellTextSize;
+            ForecastTextFontStyle = forecastTextFontStyle;
+            ForecastTextColor = forecastTextColor;
+            ForecastTextSize = forecastTextSize;
+            CurrentPriceTextFontStyle = currentPriceTextFontStyle;
+            CurrentPriceTextColor = currentPriceTextColor;
+            CurrentPriceTextSize = currentPriceTextSize;
+            DiffTextFontStyle = diffTextFontStyle;
+            DiffTextColor = diffTextColor;
+            DiffTextSize = diffTextSize;
+            DiffValueTextFontStyle = diffValueTextFontStyle;
+            DiffValueTextColorPositive = diffValueTextColorPositive;
+            DiffValueTextColorNegative = diffValueTextColorNegative;
+            DiffValueTextSize = diffValueTextSize;
+            PostTextBackground = postTextBackground;
+        }
+
+        public PostHeaderThemeStrings()
+        {
+        }
+
+      
+    }
+}

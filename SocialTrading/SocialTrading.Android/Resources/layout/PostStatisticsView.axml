@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <TextView
+      android:id="@+id/postStatictics_longPercent_textView"
+      style="@style/PostHeaderElementsStyle"
+      
+      android:text="50%"
+      />
+
+  <TextView
+      android:id="@+id/postStatictics_shortPercent_textView"
+      android:layout_alignParentEnd="true"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="50%"
+       />
+
+  <include
+      android:id="@+id/postStatictics_redGreenLine_View"
+      android:layout_width="match_parent"
+      android:layout_height="5dp"
+      android:layout_below="@id/postStatictics_shortPercent_textView"
+      android:layout_marginBottom ="5dp"
+      layout="@layout/PostRedGreenLine"
+      />
+  <TextView
+      android:id="@+id/postStatictics_long_textView"
+      android:layout_below="@+id/postStatictics_redGreenLine_View"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="long"
+      />
+
+  <TextView
+      android:id="@+id/postStatictics_short_textView"
+      android:layout_below="@+id/postStatictics_redGreenLine_View"
+      android:layout_alignParentEnd="true"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="short"
+      />
+
+  <TextView
+      android:id="@+id/postStatictics_deals_textView"
+      android:layout_below="@id/postStatictics_long_textView"
+      style="@style/PostHeaderElementsStyle"
+      
+      android:text="Deals:"
+            />
+  <TextView
+      android:id="@+id/postStatictics_dealsValue_textView"
+      android:layout_toEndOf="@+id/postStatictics_deals_textView"
+      android:layout_below="@id/postStatictics_long_textView"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="23"
+      />
+
+  <TextView
+      android:id="@+id/postStatictics_plValue_textView"
+
+      android:layout_below="@id/postStatictics_long_textView"
+      android:layout_alignParentEnd="true"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="$23.44"
+      />
+    
+    <TextView
+      android:id="@+id/postStatictics_pl_textView"
+      android:layout_toStartOf="@id/postStatictics_plValue_textView"
+      android:layout_below="@id/postStatictics_long_textView"
+      style="@style/PostHeaderElementsStyle"
+
+      android:text="PL"
+      />
+</RelativeLayout>

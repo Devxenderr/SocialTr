@@ -1,0 +1,56 @@
+﻿{
+	"IImageViewTheme": [
+	{
+		"AuthImageViewBackgroundStyle": {
+			"Image": "backgroundRA"
+		},
+		"AuthLogoImageViewStyle": {
+			"Image": "logoInvestArena"
+		},
+		"AuthNameFeatureImageViewStyle": {
+			"Image": "regNameLogo"
+		},
+		"AuthPassFeatureImageViewStyle": {
+			"Image": "regPassLogo"
+		},
+		"AuthEmailFeatureImageViewStyle": {
+			"Image": "regEmailLogo"
+		},
+		"AuthPhoneFeatureImageViewStyle": {
+			"Image": "regPhoneLogo"
+		},
+		"CreatePostAvatarStyle":{
+			"Image": "defaultAvatar"
+		},
+		"PostHeaderDefaultAvatarStyle":{
+			"Image": "defaultAvatar"
+		},
+		"PostHeaderRecommendSellImageStyle":{
+			"Image": "rightArrowTransparent",
+			"BackgroundColor": "#EE5451"
+		},
+		"PostHeaderRecommendBuyImageStyle":{
+			"Image": "rightArrowTransparent",
+			"BackgroundColor": "#1EBEA5"
+		},
+		"PostHeaderCurrentPriceImgUpStyle":{
+			"Image": "arrowDownRed18"
+		},
+		"PostHeaderCurrentPriceImgDownStyle":{
+			"Image": "arrowUpGreen18"
+		},
+		"PostHeaderStateOnlineImageStyle":{
+			"Image": "online"
+		},
+		"PostHeaderStateOfflineImageStyle":{
+			"Image": "offline"
+		},
+		"MoreOptionsOptionItemImageStyle":{
+			"BackgroundColor": "#3b7ae9"
+		},
+		"MoreOptionsProfileCellAvatarImageStyle":{
+			"Image": "defaultAvatar"
+		}
+	}
+	]
+}

@@ -1,0 +1,45 @@
+﻿{
+	"IViewTheme": [
+	{
+		"AuthViewBackgroundStyleIOS": {
+			"BackgroundColor": "backgroundRA"
+		},
+		"CreatePostDividingLine": {
+			"BackgroundColor": "#9B9B9B"
+		},
+		"PostHeaderRecommendBuytyle": {
+			"BackgroundColor": "#1EBEA5"
+		},
+		"PostHeaderRecommendSellStyle": {
+			"BackgroundColor": "#EE5451"
+		},
+		"PostsToolBarStyle": {
+			"BackgroundColor": "#16254C"
+		},
+		"CreatePostToolbarStyle": {
+			"BackgroundColor": "#16254C"
+		},
+		"ToolsSelectedCellStyle": {
+			"BackgroundColor": "#3B7AE9"
+		},
+		"ToolsUnselectedCellStyle": {
+			"BackgroundColor": "#FFFFFF"
+		},
+		"MoreOptionsOptionItemBackgroundStyle": {
+			"BackgroundColor": "#FFFFFF"
+		},
+		"MoreOptionsProfileCellStyle": {
+			"BackgroundColor": "#FFFFFF"
+		},
+		"MoreOptionsToolBarStyle": {
+			"BackgroundColor": "#16254C"
+		},
+		"EditContactBackgroundStyle": {
+			"BackgroundColor": "#FFFFFF"
+		},
+		"EditProfileViewStyle": {
+			"BackgroundColor": "#FFFFFF"
+		}
+	}
+	]
+}

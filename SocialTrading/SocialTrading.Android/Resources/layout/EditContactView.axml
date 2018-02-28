@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <TextView
+        android:id="@+id/editContact_email_textView"
+        android:layout_marginTop="10dp"
+        android:text="Email"
+        style="@style/EditContactTextView" />
+    <EditText
+        android:id="@+id/editContact_email_editText"
+        android:layout_below="@id/editContact_email_textView"
+        android:text="123@123.123"
+        android:editable="false"
+        style="@style/EditContactEditText" />
+    <TextView
+        android:id="@+id/editContact_skype_textView"
+        android:layout_below="@id/editContact_email_editText"
+        android:text="Skype"
+        style="@style/EditContactTextView" />
+    <EditText
+        android:id="@+id/editContact_skype_editText"
+        android:layout_below="@id/editContact_skype_textView"
+        android:text="123skype"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:textCursorDrawable="@null"
+        style="@style/EditContactEditText" />
+    <TextView
+        android:id="@+id/editContact_country_textView"
+        android:layout_below="@id/editContact_skype_editText"
+        android:text="Country"
+        style="@style/EditContactTextView" />
+    <EditText
+        android:id="@+id/editContact_country_editText"
+        android:layout_below="@id/editContact_country_textView"
+        android:text="USA"
+        android:editable="false"
+        style="@style/EditContactEditText" />
+    <TextView
+        android:id="@+id/editContact_city_textView"
+        android:layout_below="@id/editContact_country_editText"
+        android:text="City"
+        style="@style/EditContactTextView" />
+    <EditText
+        android:id="@+id/editContact_city_editText"
+        android:layout_below="@id/editContact_city_textView"
+        android:text="Boston"
+        android:inputType="textAutoCorrect|textCapWords"
+        android:textCursorDrawable="@null"
+        style="@style/EditContactEditText" />
+    <TextView
+        android:id="@+id/editContact_phone_textView"
+        android:layout_below="@id/editContact_city_editText"
+        android:text="Phone"
+        style="@style/EditContactTextView" />
+    <EditText
+        android:id="@+id/editContact_phone_editText"
+        android:layout_below="@id/editContact_phone_textView"
+        android:text="+123123123"
+        android:inputType="phone"
+        android:textCursorDrawable="@null"
+        style="@style/EditContactEditText" />
+    <Button
+        android:id="@+id/editContact_save_button"
+        android:layout_below="@id/editContact_phone_editText"
+        android:text="Save data"
+        style="@style/EditContactButton" />
+    <Button
+        android:id="@+id/editContact_cancel_button"
+        android:layout_below="@id/editContact_save_button"
+        android:text="Cancel"
+        style="@style/EditContactButton" />
+</merge>

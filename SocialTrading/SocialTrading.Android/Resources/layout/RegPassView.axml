@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/regPass_background_relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ImageView
+    android:id="@+id/regPass_background_imageView"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+  <ImageButton
+    android:id="@+id/regPass_back_imageButton"
+    style="@style/RegBackImageButton"/>
+  <ImageView
+    android:id="@+id/regPass_logo_imageView"
+    style="@style/LogoImage" />
+    <TextView
+        android:id="@+id/reg_enterPass_textView"
+        android:layout_below="@+id/regPass_logo_imageView"
+        android:layout_marginTop="50dp"
+        style="@style/RegTextView" />
+    <EditText
+        android:id="@+id/reg_pass_editText"
+        android:layout_below="@+id/reg_enterPass_textView"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        style="@style/AuthEditText"/>
+    <EditText
+        android:id="@+id/reg_confirm_pass_editText"
+        android:layout_below="@+id/reg_pass_editText"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        style="@style/AuthEditText"/>
+    <TextView
+        android:id="@+id/reg_userAgreement_textView"
+        android:layout_below="@+id/reg_confirm_pass_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp" />
+    <Button
+        android:id="@+id/reg_follow_main_button"
+        android:layout_below="@+id/reg_userAgreement_textView"
+        android:layout_marginTop="15dp"
+        style="@style/RegButton" />
+  <LinearLayout
+    android:id="@+id/regPass_feature_relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp">
+      <ImageView
+         android:id="@+id/regPass_featureImage_imageView"
+         android:layout_centerHorizontal="true"
+         style="@style/FeatureImage"/>
+    </RelativeLayout>
+    <TextView
+      android:id="@+id/regPass_featureText_textView"
+      android:layout_alignParentBottom="true"
+      android:layout_below="@id/regPass_featureImage_imageView"
+      style="@style/FeatureTextView"/>
+  </LinearLayout>
+</RelativeLayout>
